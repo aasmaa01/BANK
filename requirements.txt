@@ -1,0 +1,750 @@
+ORDERS : 
+1- reecrit tout ça sant erreurs (avec 0 erreurs )
+2- explique en details et commantaires c qoui ça 
+---
+my database:
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3307
+-- Generation Time: Aug 06, 2024 at 08:29 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `banking_system`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `accounts`
+--
+
+CREATE TABLE `accounts` (
+  `id` int(11) NOT NULL,
+  `customer_id` int(11) NOT NULL,
+  `account_number` varchar(20) NOT NULL,
+  `account_type` varchar(20) NOT NULL,
+  `balance` float NOT NULL,
+  `agency_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `accounts`
+--
+
+INSERT INTO `accounts` (`id`, `customer_id`, `account_number`, `account_type`, `balance`, `agency_id`, `user_id`) VALUES
+(1, 1, '1234567890', 'savings', 10, 1, 1),
+(2, 2, '1234567891', 'savings', 100, 1, 1),
+(3, 2, '1234567892', 'savings', 400, 2, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `agencies`
+--
+
+CREATE TABLE `agencies` (
+  `id` int(11) NOT NULL,
+  `agency_name` varchar(100) NOT NULL,
+  `agency_address` varchar(255) NOT NULL,
+  `agency_phone` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `agencies`
+--
+
+INSERT INTO `agencies` (`id`, `agency_name`, `agency_address`, `agency_phone`) VALUES
+(1, 'badr1', 'Central Bank', '055555555'),
+(2, 'badr2', 'Regional Bank', '066666666'),
+(1, 'badr1', 'Central Bank', '055555555'),
+(2, 'badr2', 'Regional Bank', '066666666'),
+(1, 'badr1', 'Central Bank', '055555555'),
+(2, 'badr2', 'Regional Bank', '066666666');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `alembic_version`
+--
+
+CREATE TABLE `alembic_version` (
+  `version_num` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact_messages`
+--
+
+CREATE TABLE `contact_messages` (
+  `id` int(11) NOT NULL,
+  `full_name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone_number` varchar(20) NOT NULL,
+  `message` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customers`
+--
+
+CREATE TABLE `customers` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `address` text DEFAULT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `date_of_birth` date NOT NULL,
+  `phone_number` varchar(20) NOT NULL,
+  `email_address` varchar(100) NOT NULL,
+  `nin_cust` varchar(20) NOT NULL,
+  `rib_cust` varchar(24) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `loans`
+--
+
+CREATE TABLE `loans` (
+  `loan_id` int(11) NOT NULL,
+  `client_id` int(11) DEFAULT NULL,
+  `loan_amount` decimal(10,2) DEFAULT NULL,
+  `interest_rate` decimal(5,2) DEFAULT NULL,
+  `start_date` date DEFAULT NULL,
+  `end_date` date DEFAULT NULL,
+  `outstanding_balance` decimal(10,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `repayments`
+--
+
+CREATE TABLE `repayments` (
+  `repayment_id` int(11) NOT NULL,
+  `loan_id` int(11) DEFAULT NULL,
+  `repayment_date` date DEFAULT NULL,
+  `repayment_amount` decimal(10,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transactions`
+--
+
+CREATE TABLE `transactions` (
+  `id` int(11) NOT NULL,
+  `id_transaction` int(11) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `currency` varchar(10) NOT NULL,
+  `date` date NOT NULL,
+  `transaction_type` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `transactions`
+--
+
+INSERT INTO `transactions` (`id`, `id_transaction`, `amount`, `currency`, `date`, `transaction_type`) VALUES
+(1, 0, 100, 'USD', '2024-08-06', 'credit');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password_hash` varchar(255) NOT NULL,
+  `email_address` varchar(100) NOT NULL,
+  `first_name` varchar(50) DEFAULT NULL,
+  `last_name` varchar(50) DEFAULT NULL,
+  `date_of_birth` date DEFAULT NULL,
+  `address` varchar(200) DEFAULT NULL,
+  `phone_number` varchar(15) DEFAULT NULL,
+  `nin_cust` varchar(50) DEFAULT NULL,
+  `rib_cust` varchar(50) DEFAULT NULL,
+  `agency_id` int(11) DEFAULT NULL,
+  `registration_date` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password_hash`, `email_address`, `first_name`, `last_name`, `date_of_birth`, `address`, `phone_number`, `nin_cust`, `rib_cust`, `agency_id`, `registration_date`) VALUES
+(2, 'newuser', 'scrypt:32768:8:1$SwZDcYKJlrWEs8su$57bb8a2b051342a169eda9da03a6679cec19fadb5172d88e4ffcc627e3ee9a792dc8aa2116220d15cebd677a038eea82a260ca814c8af4b97d1234124491b7a1', 'newuser@example.com', 'New', 'User', '1990-01-01', '456 New St', '0987654321', '987654321', 'RIB987654321', 1, '2024-08-03 00:00:00'),
+(3, 'asmaaaaa', 'scrypt:32768:8:1$U0V8PXRZXYgZOeQb$34176c48e720e39f446ffd02efb90d485be2ea2fe64a941aa613c0c2b60247c035b3d40bc75f668649c7c8d8347d314961a23e045b579e7e7ef6196cedd491b8', 'aasmaelearn@gmail.com', 'asma', 'soltani', '2005-01-01', '456 sidi abdellah', '0424242424', '9876543211', 'RIB9876543121', 1, '2024-08-03 00:00:00'),
+(4, 'asmaaa2', 'scrypt:32768:8:1$QHNaUwXSuPEeRnRN$c8b719e613855f2543d1b7d5dcdbcfb6e6df8310102acd0b36e236d07c324fbc955b682201a899de48446524bf49e20573d0270aa50d4ddc58c8a523d739d733', 'hzzgyz@gmail.com', 'asma', 'szolta', '2005-01-01', 'ggggggg', '0444114', '444444444444444', '7777777777', 1, '2024-01-01 00:00:00');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `accounts`
+--
+ALTER TABLE `accounts`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `account_number` (`account_number`),
+  ADD KEY `customer_id` (`customer_id`),
+  ADD KEY `agency_id` (`agency_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `alembic_version`
+--
+ALTER TABLE `alembic_version`
+  ADD PRIMARY KEY (`version_num`);
+
+--
+-- Indexes for table `contact_messages`
+--
+ALTER TABLE `contact_messages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `customers`
+--
+ALTER TABLE `customers`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indexes for table `transactions`
+--
+ALTER TABLE `transactions`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id_transaction` (`id_transaction`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`),
+  ADD UNIQUE KEY `email_address` (`email_address`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `accounts`
+--
+ALTER TABLE `accounts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `contact_messages`
+--
+ALTER TABLE `contact_messages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `customers`
+--
+ALTER TABLE `customers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `transactions`
+--
+ALTER TABLE `transactions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+---
+app.py
+from flask import Flask, request, jsonify, session
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from flask_cors import CORS
+from config import Config
+from sqlalchemy.exc import IntegrityError
+from sqlalchemy.orm import Session
+
+# Create SQLAlchemy and Migrate instances
+db = SQLAlchemy()
+migrate = Migrate()
+
+def create_app():
+    app = Flask(__name__)
+    app.config.from_object(Config)
+
+    db.init_app(app)
+    migrate.init_app(app, db)
+
+
+    # Enable CORS for the app
+    CORS(app)
+
+    # Import models after initializing db and migrate
+    from models import User, Account, Transaction, Agency, ContactMessage
+
+    @app.errorhandler(404)
+    def not_found_error(error):
+        return jsonify({"error": "Resource not found"}), 404
+
+    @app.errorhandler(500)
+    def internal_error(error):
+        app.logger.error(f"Internal Server Error: {error}")
+        return jsonify({"error": "Internal server error"}), 500
+
+
+    
+    @app.route('/login', methods=['POST'])
+    def login():
+        data = request.json
+        email = data.get('email_address')
+        password = data.get('password')
+
+        try:
+            user = User.query.filter_by(email_address=email).first()
+            if user and check_password_hash(user.password_hash, password):
+                session['user_id'] = user.id
+                return jsonify({'message': 'Logged in successfully'})
+            else:
+                return jsonify({'error': 'Invalid email or password'}), 401
+        except Exception as e:
+            app.logger.error(f'Error during login: {e}')
+            return jsonify({'error': 'An error occurred during login'}), 500
+
+    @app.route('/signup', methods=['POST'])
+    def signup():
+        data = request.get_json()
+        
+    
+        try:
+            # Ensure all required fields are present
+            required_fields = ['email_address', 'password', 'date_of_birth']
+            for field in required_fields:
+                if field not in data:
+                    return jsonify({"error": f"Missing required field: {field}"}), 400
+        
+            # Hash the password before storing
+            hashed_password = generate_password_hash(data['password'])
+        
+            new_user = User(
+                id=data.get('id'),
+                username=data.get('username'),
+                password_hash=hashed_password,
+                first_name=data.get('first_name'),
+                last_name=data.get('last_name'),
+                date_of_birth=data.get('date_of_birth'),
+                address=data.get('address'),
+                phone_number=data.get('phone_number'),
+                email_address=data.get('email_address'),
+                nin_cust=data.get('nin_cust'),
+                rib_cust=data.get('rib_cust'),
+                agency_id=data.get('agency_id'),
+                registration_date=data.get('registration_date')
+            )
+
+        
+            db.session.add(new_user)
+            db.session.commit()
+            return jsonify({"message": "User created successfully!"}), 201
+        except IntegrityError:
+            db.session.rollback()
+            return jsonify({"error": "User with this email already exists!"}), 400
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+
+
+    @app.route('/account', methods=['POST'])
+    def create_account():
+        data = request.get_json()
+        try:
+            required_fields = ['customer_id', 'account_number', 'account_type', 'balance', 'agency_id', 'user_id']
+            for field in required_fields:
+                if field not in data:
+                    return jsonify({"error": f"Missing required field: {field}"}), 400
+
+            new_account = Account(
+                customer_id=data['customer_id'],
+                account_number=data['account_number'],
+                account_type=data['account_type'],
+                balance=data['balance'],
+                agency_id=data['agency_id'],
+                user_id=data['user_id']
+            )
+            db.session.add(new_account)
+            db.session.commit()
+            return jsonify({"message": "Account created successfully!"}), 201
+        except IntegrityError:
+            db.session.rollback()
+            return jsonify({"error": "Account with this number already exists!"}), 400
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+
+    @app.route('/logout', methods=['GET'])
+    def logout():
+        session.pop('user_id', None)
+        return jsonify({"message": "Logged out successfully"}), 200
+
+    @app.route('/customer/<int:customer_id>', methods=['GET'])
+    def get_customer_info(customer_id):
+        customer = User.query.get(customer_id)
+        if customer:
+            return jsonify(customer.to_dict())
+        else:
+            return jsonify({"error": "Customer not found"}), 404
+
+    @app.route('/account/<int:account_id>', methods=['GET'])
+    def get_account_details(account_id):
+        account = Account.query.get(account_id)
+        if account:
+            return jsonify(account.to_dict())
+        else:
+            return jsonify({"error": "Account not found"}), 404
+
+    @app.route('/agency/<int:agency_id>', methods=['GET'])
+    def get_agency_details(agency_id):
+        agency = Agency.query.get(agency_id)
+        if agency:
+            return jsonify(agency.to_dict())
+        else:
+            return jsonify({"error": "Agency not found"}), 404
+
+    @app.route('/transaction', methods=['POST'])
+    def create_transaction():
+        data = request.get_json()
+        app.logger.info(f"Received transaction data: {data}")
+        try:
+            new_transaction = Transaction(
+                amount=data['amount'],
+                currency=data['currency'],
+                date=data['date'],
+                transaction_type=data['transaction_type']
+            )
+            db.session.add(new_transaction)
+            db.session.commit()
+            return jsonify({"message": "Transaction created successfully"}), 201
+        except Exception as e:
+            app.logger.error(f"Error creating transaction: {e}")
+            return jsonify({"error": str(e)}), 500
+
+
+    @app.route('/transfer', methods=['POST'])
+    def transfer():
+        data = request.get_json()
+        app.logger.info(f"Received transfer data: {data}")
+
+        try:
+            session = Session(bind=db.engine)  # Create a session
+            sender_account = session.get(Account, data['from_account_id'])
+            receiver_account = session.get(Account, data['to_account_id'])
+
+            if sender_account and receiver_account:
+                if sender_account.balance >= data['amount']:
+                    sender_account.balance -= data['amount']
+                    receiver_account.balance += data['amount']
+
+                    transaction_sender = Transaction(
+                        amount=data['amount'],
+                        currency=data['currency'],
+                        date=data['date'],
+                        transaction_type='debit'
+                    )
+                    transaction_receiver = Transaction(
+                        amount=data['amount'],
+                        currency=data['currency'],
+                        date=data['date'],
+                        transaction_type='credit'
+                    )
+                    db.session.add(transaction_sender)
+                    db.session.add(transaction_receiver)
+                    db.session.commit()
+
+                    return jsonify({"message": "Transfer successful"}), 200
+                else:
+                    return jsonify({"error": "Insufficient funds"}), 400
+            else:
+                return jsonify({"error": "Invalid accounts"}), 404
+        except Exception as e:
+            app.logger.error(f"Error during transfer: {e}")
+            return jsonify({"error": str(e)}), 500
+
+
+
+    @app.route('/contact', methods=['POST'])
+    def contact():
+        data = request.get_json()
+        if all(key in data for key in ('full_name', 'Email_address', 'phone_number', 'message')):
+            contact_message = ContactMessage(
+                full_name=data['full_name'],
+                Email_address=data['Email_address'],
+                phone_number=data['phone_number'],
+                message=data['message']
+            )
+            db.session.add(contact_message)
+            db.session.commit()
+            return jsonify({"message": "Message received"}), 201
+        else:
+            return jsonify({"message": "Missing data"}), 400
+
+    return app
+
+if __name__ == '__main__':
+    app = create_app()
+    app.run(debug=True)
+---
+manage.py:
+from app import create_app, db
+from flask_migrate import Migrate, MigrateCommand
+from flask_script import Manager
+from flask.cli import AppGroup
+
+app = create_app()
+migrate = Migrate(app, db)
+manager = Manager(app)
+manager.add_command('db', MigrateCommand)
+
+@app.cli.command("run")
+def run():
+    app.run(debug=True)
+---
+config.py :
+import os
+
+class Config:
+    # Utilisez la chaîne de connexion appropriée pour votre base de données
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://asmasara:asmasara123@localhost:3307/banking_system'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SECRET_KEY = 'asmasara123'
+    SQLALCHEMY_ECHO = True  # Pour le débogage
+---
+models/User.py
+from sqlalchemy import Column, Integer, String, Date, DateTime, ForeignKey
+from sqlalchemy.orm import relationship
+from app import db
+from datetime import datetime
+
+class User(db.Model):
+    __tablename__ = 'users'
+    
+    id = Column(Integer, primary_key=True)
+    username = Column(String(80), unique=True, nullable=False)
+    password_hash = Column(String(128), nullable=False)
+    email_address = Column(String(120), unique=True, nullable=False)
+    first_name = Column(String(50))
+    last_name = Column(String(50))
+    date_of_birth = Column(Date)
+    address = Column(String(200))
+    phone_number = Column(String(15))
+    nin_cust = Column(String(50))
+    rib_cust = Column(String(50))
+    agency_id = Column(Integer, ForeignKey('agencies.id'))
+    registration_date = Column(DateTime, default=datetime.utcnow)
+    # Relationships
+    agency = relationship('Agency', back_populates='users')
+    accounts = relationship('Account', back_populates='user', lazy=True)
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'username': self.username,
+            'first_name': self.first_name,
+            'last_name': self.last_name,
+            'date_of_birth': self.date_of_birth,
+            'address': self.address,
+            'phone_number': self.phone_number,
+            'email_address': self.email_address,
+            'nin_cust': self.nin_cust,
+            'rib_cust': self.rib_cust,
+            'agency_id': self.agency_id,
+            'registration_date': self.registration_date,
+        }
+---
+Transaction.py
+from app import db
+class Transaction(db.Model):
+    __tablename__ = 'transactions'
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    id_transaction = db.Column(db.Integer,  autoincrement=True)
+    amount = db.Column(db.Float, nullable=False)
+    currency = db.Column(db.String(3), nullable=False)
+    date = db.Column(db.Date, nullable=False)
+    transaction_type = db.Column(db.String(10), nullable=False)
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'id_transaction': self.id_transaction,
+            'amount': self.amount,
+            'currency': self.currency,
+            'date': self.date.isoformat() if self.date else None,
+            'transaction_type': self.transaction_type
+        }
+--- Repayment.py
+from sqlalchemy import Column, Integer, Numeric, Date, ForeignKey
+from sqlalchemy.orm import relationship
+from sqlalchemy.ext.declarative import declarative_base
+from app import db
+class Repayment(db.Model):
+    __tablename__ = 'repayments'
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    amount = Column(Numeric(10, 2), nullable=False)
+    date = Column(Date, nullable=False)
+    account_id = Column(Integer, ForeignKey('accounts.id'), nullable=False)
+    # Relationships
+    account = relationship('Account')
+--- ContactMessage.py
+from app import db
+class ContactMessage(db.Model):
+    __tablename__ = 'contact_messages'
+    id = db.Column(db.Integer, primary_key=True)
+    full_name = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(100), nullable=False)
+    phone_number = db.Column(db.String(20), nullable=False)
+    message = db.Column(db.String(1000), nullable=False)
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'full_name': self.full_name,
+            'email': self.email,
+            'phone_number': self.phone_number,
+            'message': self.message
+        }
+--- Agency.py
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import relationship
+from app import db
+class Agency(db.Model):
+    __tablename__ = 'agencies'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(100), nullable=False)
+    location = Column(String(100))
+    # Define the reverse relationship
+    users = db.relationship('User', back_populates='agency')
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'location': self.location
+        }
+--- Account.py
+from sqlalchemy import Column, Integer, String, Float, ForeignKey
+from sqlalchemy.orm import relationship
+from app import db
+class Account(db.Model):
+    __tablename__ = 'accounts'
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    customer_id = Column(Integer, nullable=False)
+    account_number = Column(String(20), unique=True, nullable=False)
+    account_type = Column(String(20), nullable=False)
+    balance = Column(Float, nullable=False)
+    agency_id = Column(Integer, ForeignKey('agencies.id'), nullable=False)
+    user_id = Column(Integer, ForeignKey('users.id'), nullable=False)
+    # Relationships
+    user = relationship('User', back_populates='accounts')
+    agency = relationship('Agency', backref='accounts')  # Assuming you have an Agency model
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'balance': self.balance,
+            'user_id': self.user_id
+        }
+--- __init__.py
+from app import db
+from .User import User
+from .Account import Account
+from .Transaction import Transaction
+from .Agency import Agency
+from .ContactMessage import ContactMessage
+
+
+
+/backend_
+    /app
+        __init__.py
+        /models
+            __init__.py
+            User.py
+            Account.py
+            Transaction.py
+            Agency.py
+            ContactMessage.py
+            Card.py
+            Repayment
+            Loan
+            Credit
+        /migrations
+        /venv
+        /instance
+        /__pypcache__
+    app.py
+    config.py
+    manage.py
+
+
+
+/cd ONLINEBANKING_DRAFT
+        /__pypcache__
+        /.parcel-cache
+        /dist
+        /instance
+        /node_modules
+        /public
+        /venv
+        /templates
+            /public
+            contact.html
+            contact.css
+            credit-cards.css
+            credit-cards.html
+            green-bank-landing-page.html //home page
+            green-bank-landing-page.css
+            index.css
+            investisment.css
+            investisment.html
+            loan.html
+            loan.css
+            login.html
+            login.css
+            main-dashboard.css
+            main-dashboard.html
+            index.html
+            services.html
+            services.css
+            signup.html
+            setting-page.html
+            setting-page.css
+            transaction.css
+            transaction.html
+            

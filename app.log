@@ -1,0 +1,90 @@
+Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 854, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 463, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 629, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 765, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 740, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\Desktop\OnlineBanking_Draft\app.py", line 72, in page_not_found
+    return render_template('404.html'), 404
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 127, in _render
+    app.update_template_context(context)
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 493, in update_template_context
+    context.update(self.ensure_sync(func)())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 405, in _user_context_processor
+    return dict(current_user=_get_user())
+                             ^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 370, in _get_user
+    current_app.login_manager._load_user()
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\login_manager.py", line 347, in _load_user
+    raise Exception(
+Exception: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+Internal server error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Page not found: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.

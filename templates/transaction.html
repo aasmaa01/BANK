@@ -14,6 +14,35 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
     />
+    <script>
+      document.getElementById('transaction-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+      
+          const formData = {
+              amount: document.getElementById('amount').value,
+              currency: document.getElementById('currency').value,
+              date: document.getElementById('date').value,
+              transaction_type: document.getElementById('transaction_type').value
+          };
+      
+          fetch('/transaction', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(formData)
+          })
+          .then(response => response.json())
+          .then(data => {
+              alert(data.message);
+              document.getElementById('transaction-form').reset();
+          })
+          .catch(error => {
+              console.error('Error:', error);
+              alert('An error occurred');
+          });
+      });
+      </script>
   </head>
   <body>
     <div class="transaction">
@@ -313,7 +342,7 @@
                     <div class="spending-chart">
                       <div class="chart-bars1">
                         <div class="chart-bar1"></div>
-                        <div class="chart-bar2"></div>
+                        
                       </div>
                     </div>
                   </div>

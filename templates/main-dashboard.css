@@ -143,6 +143,7 @@
   font-family: var(--heading-four-semibold-20p);
 }
 .navigation1 {
+  width: 100%;
   align-self: stretch;
   justify-content: flex-start;
   padding: 0 var(--padding-21xl) 0 var(--padding-19xl);
@@ -2256,7 +2257,7 @@
   position: absolute;
   top: 0;
   left: 249px;
-  width: 1191px;
+  width: 1210px;
   align-items: flex-start;
   gap: var(--gap-6xl);
 }

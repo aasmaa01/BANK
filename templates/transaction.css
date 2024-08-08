@@ -1,3 +1,9 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
 .transaction-child {
   width: 250px;
   height: 1024px;
@@ -1102,6 +1108,7 @@
   text-align: center;
   font-size: var(--font-size-sm);
   color: var(--primary-2);
+  margin-right: 1cm;
 }
 .main-content,
 .my-expense-parent,
@@ -1118,20 +1125,22 @@
   max-width: 100%;
 }
 .main-content {
-  width: 1110px;
+  margin-top: 1cm;
+  width: 1090px; /* Adjust to 100% to allow full width */
   flex-direction: row;
   flex-wrap: wrap;
   gap: var(--gap-8xs);
-  max-width: 1406%;
+  margin-right: 1cm;
   flex-shrink: 0;
+  height: 100%; /* Add height to allow full height */
 }
 .frame-child60 {
-  width: 1110px;
+  width: 1000px;
   height: 397px;
   position: relative;
   border-radius: var(--br-6xl);
   background-color: var(--color-white);
-  display: none;
+  display:contents;
   max-width: 100%;
 }
 .description,
@@ -1216,7 +1225,7 @@
   gap: 49px;
 }
 .transaction-details5 {
-  width: 1010px;
+  width: 900px;
   justify-content: space-between;
   max-width: 100%;
   gap: var(--gap-xl);
@@ -2055,6 +2064,7 @@
 }
 .rectangle-parent45 {
   flex: 1;
+ 
   border-radius: var(--br-6xl);
   background-color: var(--color-white);
   flex-direction: column;
@@ -2062,15 +2072,17 @@
   gap: var(--gap-2xs);
   max-width: 100%;
   z-index: 1;
+  
 }
 .frame-wrapper16 {
-  width: 1110px;
+  width: 1100px;
   flex-direction: row;
   padding: 0 0 var(--padding-8xs);
   max-width: 1406%;
   flex-shrink: 0;
   font-size: var(--body-one-regular-16p-size);
   color: var(--color-gray-100);
+  margin-right: 1cm;
 }
 .frame-child69,
 .pagination-child {
@@ -2232,25 +2244,25 @@
   position: relative;
   font-size: var(--button-2-medium-15p-size);
   color: var(--color-blue-200);
+  margin-right: 1cm;
 }
 .rectangle-parent41 {
-  flex: 1;
+  width: 100%;
+  height: 100%;
   background-color: var(--color-darkolivegreen-300);
-  border-top: 1px solid var(--color-whitesmoke-500);
-  border-right: 1110px solid var(--color-whitesmoke-500);
-  border-bottom: 1px solid var(--color-whitesmoke-500);
-  border-left: 1px solid var(--color-whitesmoke-500);
   box-sizing: border-box;
+  display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: var(--padding-3xl) 0 var(--padding-6xl);
-  gap: var(--gap-6xl);
-  max-width: calc(100% - 250px);
+  justify-content: center; /* Center content vertically */
+  padding: 0; /* Remove padding if it interferes with full size */
+  margin: 0; /* Ensure no margin affects the layout */
   text-align: left;
   font-size: var(--heading-two-semibold-22p-size);
   color: var(--color-white);
   font-family: var(--heading-four-semibold-20p);
 }
+
 .navigation-and-content,
 .transaction {
   display: flex;

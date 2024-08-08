@@ -14,6 +14,37 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Open Sans:wght@400;600;700&display=swap"
     />
+    <script>
+      // contact.js
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = {
+            full_name: document.getElementById('full_name').value,
+            email_address: document.getElementById('email_address').value,
+            phone_number: document.getElementById('phone_number').value,
+            message: document.getElementById('message').value
+        };  
+
+        fetch('/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            document.getElementById('contact-form').reset();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred');
+        });
+      });
+
+    </script>
   </head>
   <body>
     <div class="contact1">
@@ -386,6 +417,40 @@
           </div>
         </div>
       </footer>
+      <script>
+        async function handleContact(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('contact-form');
+            const formData = new FormData(form);
+            const payload = {
+                full_name: formData.get('full_name'),
+                email: formData.get('email'),
+                phone_number: formData.get('phone_number'),
+                message: formData.get('message')
+            };
+
+            try {
+                const response = await fetch('/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    alert('Message sent successfully');
+                    form.reset(); // Reset form fields
+                } else {
+                    alert('Failed to send message: ' + result.message);
+                }
+            } catch (error) {
+                alert('An error occurred: ' + error.message);
+            }
+        }
+    </script>
     </div>
   </body>
 </html>

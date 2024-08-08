@@ -14,11 +14,106 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
     />
+    <script>
+      // loan.js
+      document.getElementById('loan-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = {
+            client_id: document.getElementById('client_id').value,
+            loan_amount: document.getElementById('loan_amount').value,
+            interest_rate: document.getElementById('interest_rate').value,
+            start_date: document.getElementById('start_date').value,
+            end_date: document.getElementById('end_date').value,
+            outstanding_balance: document.getElementById('outstanding_balance').value
+        };
+
+        fetch('/loan', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            document.getElementById('loan-form').reset();
+        })
+          .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred');
+        });
+      });
+
+    </script>
   </head>
   <body>
     <form class="loan">
       <div class="loan-child"></div>
       <div class="loan-item"></div>
+      <div class="content">
+        <div class="header5">
+          <div class="header-child5"></div>
+          <div class="header-content">
+            <div class="bank-name2">
+              <img
+                class="banque-de-lagriculture-et-du-icon6"
+                loading="lazy"
+                alt=""
+                src="./public/banque-de-lagriculture-et-du-dveloppement-ruralsvg-11@2x.png"
+              />
+  
+              <div class="badr-bank-container">
+                <a class="badr-bank7">Badr Bank</a>
+              </div>
+            </div>
+          </div>
+          <header class="loan-header">
+            <div class="loan-title">
+              <a class="loans7">Loans</a>
+            </div>
+            <div class="loan-search">
+              <div class="search-bar1">
+                <button class="rectangle-parent75">
+                  <div class="frame-child116"></div>
+                  <img
+                    class="magnifying-glass-1-icon6"
+                    alt=""
+                    src="./public/magnifyingglass-12.svg"
+                  />
+  
+                  <div class="search-placeholder2">
+                    <a class="search-for-something6">Search for something</a>
+                  </div>
+                </button>
+              </div>
+              <div class="search-icons">
+                <img
+                  class="search-icons-child"
+                  loading="lazy"
+                  alt=""
+                  src="./public/group-42.svg"
+                />
+              </div>
+              <div class="search-icons1">
+                <img
+                  class="search-icons-item"
+                  loading="lazy"
+                  alt=""
+                  src="./public/group-33.svg"
+                />
+              </div>
+              <img
+                class="mask-group-icon9"
+                loading="lazy"
+                alt=""
+                src="./public/mask-group2@2x.png"
+              />
+            </div>
+          </header>
+  
+      </div>
       <div class="content2">
         <div class="content-child"></div>
         <div class="content-inner">
@@ -112,66 +207,7 @@
         </div>
         <div class="content-divider"></div>
       </div>
-      <div class="header5">
-        <div class="header-child5"></div>
-        <div class="header-content">
-          <div class="bank-name2">
-            <img
-              class="banque-de-lagriculture-et-du-icon6"
-              loading="lazy"
-              alt=""
-              src="./public/banque-de-lagriculture-et-du-dveloppement-ruralsvg-11@2x.png"
-            />
-
-            <div class="badr-bank-container">
-              <a class="badr-bank7">Badr Bank</a>
-            </div>
-          </div>
-        </div>
-        <header class="loan-header">
-          <div class="loan-title">
-            <a class="loans7">Loans</a>
-          </div>
-          <div class="loan-search">
-            <div class="search-bar1">
-              <button class="rectangle-parent75">
-                <div class="frame-child116"></div>
-                <img
-                  class="magnifying-glass-1-icon6"
-                  alt=""
-                  src="./public/magnifyingglass-12.svg"
-                />
-
-                <div class="search-placeholder2">
-                  <a class="search-for-something6">Search for something</a>
-                </div>
-              </button>
-            </div>
-            <div class="search-icons">
-              <img
-                class="search-icons-child"
-                loading="lazy"
-                alt=""
-                src="./public/group-42.svg"
-              />
-            </div>
-            <div class="search-icons1">
-              <img
-                class="search-icons-item"
-                loading="lazy"
-                alt=""
-                src="./public/group-33.svg"
-              />
-            </div>
-            <img
-              class="mask-group-icon9"
-              loading="lazy"
-              alt=""
-              src="./public/mask-group2@2x.png"
-            />
-          </div>
-        </header>
-      </div>
+      
       <main class="loan-types">
         <section class="loan-type-options">
           <div class="loan-type-options-child"></div>

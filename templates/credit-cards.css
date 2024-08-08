@@ -362,6 +362,7 @@
   display: none;
 }
 .my-cards {
+  margin-left: 1cm;
   text-decoration: none;
   position: relative;
   font-weight: 600;
@@ -465,6 +466,7 @@
   justify-content: flex-start;
   gap: var(--gap-12xl-2);
   color: var(--color-gray-200);
+  margin-left: 1cm;
 }
 .card-list-second-row {
   flex: 1;
@@ -547,6 +549,7 @@
   padding: var(--padding-5xl) 0 0;
   gap: var(--gap-10xl-1);
   min-width: 262px;
+  margin-left: 1cm;
 }
 .frame-child45 {
   align-self: stretch;
@@ -925,6 +928,7 @@
   font-weight: 600;
   font-family: inherit;
   z-index: 1;
+  margin-left: 1cm;
 }
 .frame-child51 {
   width: 350px;
@@ -1088,6 +1092,7 @@
   gap: var(--gap-sm);
 }
 .rectangle-parent30 {
+  margin-left: 1cm;
   border-radius: var(--br-6xl);
   background-color: var(--color-white);
   align-items: flex-end;
@@ -1106,6 +1111,7 @@
   font-weight: 600;
   font-family: inherit;
   z-index: 1;
+  margin-left: 1cm;
 }
 .add-card-button-container,
 .card-statistics-title-containe {
@@ -1943,6 +1949,7 @@
   max-width: 100%;
 }
 .rectangle-parent36 {
+  margin-left: 1cm;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -2194,11 +2201,12 @@
   color: var(--color-steelblue);
 }
 .my-cards-heading {
-  position: absolute;
+  position:relative;
   top: 101px;
   left: 250px;
+ 
   background-color: var(--color-darkolivegreen-200);
-  width: 1190px;
+  width: 1210px;
   flex-direction: column;
   padding: var(--padding-3xl) 0 var(--padding-9xl);
   box-sizing: border-box;

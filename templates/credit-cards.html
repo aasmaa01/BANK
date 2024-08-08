@@ -15,6 +15,30 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
     />
   </head>
+  <script>
+    // credit-cards.js
+      document.addEventListener('DOMContentLoaded', function() {
+        fetch('/cards')
+        .then(response => response.json())
+        .then(data => {
+            const list = document.getElementById('credit-cards-list');
+            data.forEach(card => {
+                const cardElement = document.createElement('div');
+                cardElement.className = 'card';
+                cardElement.innerHTML = `
+                    <p>Card Number: ${card.card_number}</p>
+                    <p>Card Type: ${card.card_type}</p>
+                    <p>Expiration Date: ${card.expiration_date}</p>
+                    <p>Cardholder Name: ${card.cardholder_name}</p>
+                    <p>Balance: ${card.balance}</p>
+          `     ;
+                list.appendChild(cardElement);
+            });
+        })
+        .catch(error => console.error('Error:', error));
+      });
+
+  </script>
   <body>
     <div class="credit-cards2">
       <div class="page-background"></div>

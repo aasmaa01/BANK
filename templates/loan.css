@@ -1,8 +1,13 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 .loan-child {
   width: 350px;
   height: 1px;
   max-width: 100%;
   z-index: 1;
+  
 }
 .content-child,
 .loan-child,
@@ -16,6 +21,23 @@
   background-color: var(--color-aliceblue-300);
   max-width: 100%;
   z-index: 2;
+}
+.content-aaa{
+  
+  align-self: stretch;
+  width: 250px;
+  background: linear-gradient(
+    180deg,
+    #357938 23%,
+    #409244 81%,
+    #57c55b 89.5%,
+    #62df67
+  );
+  border-top: 1px solid var(--color-aliceblue-300);
+  border-right: 1190px solid var(--color-aliceblue-300);
+  border-bottom: 1px solid var(--color-aliceblue-300);
+  border-left: 1px solid var(--color-aliceblue-300);
+  box-sizing: border-box;
 }
 .content-child {
   align-self: stretch;
@@ -210,6 +232,7 @@
   align-items: flex-start;
 }
 .dashboard-items {
+  
   align-self: stretch;
   justify-content: flex-start;
   gap: var(--gap-23xl);
@@ -265,7 +288,12 @@
   justify-content: space-between;
   gap: var(--gap-xl);
 }
+.search-icons, .search-icons1 {
+  margin-left: 15px; /* Space between icons */
+}
 .header-child5 {
+  flex: 1;
+
   height: 107px;
   width: 1440px;
   position: relative;
@@ -302,7 +330,7 @@
 .header-content {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 .bank-name2 {
   align-self: stretch;
@@ -310,6 +338,7 @@
   gap: var(--gap-mini);
 }
 .header-content {
+  
   width: 224px;
   flex-direction: column;
   padding: 3.2px 0 0;
@@ -366,6 +395,8 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 1.1px 0 0;
+  display: flex;
+  align-items: center;
 }
 .rectangle-parent75,
 .search-bar1,
@@ -436,9 +467,11 @@
 }
 .loan-header {
   width: 1110px;
-  align-items: flex-start;
   justify-content: space-between;
   gap: var(--gap-xl);
+
+  display: flex;
+  align-items: center;
 }
 .header5,
 .loan-type-options-child {

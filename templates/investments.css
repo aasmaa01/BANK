@@ -2051,19 +2051,21 @@
 }
 .investment-details,
 .investment-summary {
-  flex-direction: column;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction:column;
+  box-sizing:border-box;
+
 }
 .investment-details {
   align-self: stretch;
   background-color: var(--color-darkolivegreen-100);
   border-top: 1px solid var(--color-gainsboro-200);
-  border-right: 350px solid var(--color-gainsboro-200);
+  border-right: 1px solid var(--color-gainsboro-200);
   border-bottom: 1px solid var(--color-gainsboro-200);
   border-left: 1px solid var(--color-gainsboro-200);
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content:center;
   padding: var(--padding-9xl) 0 var(--padding-30xl);
   gap: var(--gap-5xl);
   max-width: 100%;

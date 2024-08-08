@@ -668,6 +668,8 @@
   align-self: stretch;
   justify-content: center;
   gap: var(--gap-11xl);
+  margin-top: 1cm;
+  margin-left: 1cm;
 }
 .last-transaction,
 .my-card,
@@ -680,6 +682,7 @@
   margin: 0;
   font-size: inherit;
   font-family: inherit;
+  margin-left: 1cm;
 }
 .my-card,
 .see-all {
@@ -695,6 +698,7 @@
   text-decoration: none;
   color: inherit;
   min-width: 57px;
+  color: #faf4f4;
 }
 .card,
 .card-link {
@@ -1097,6 +1101,7 @@
   box-sizing: border-box;
   gap: var(--gap-3xs);
   z-index: 3;
+  margin-left: 1cm;
 }
 .debit-credit {
   margin: 0;
@@ -1106,6 +1111,7 @@
   font-family: inherit;
   color: var(--color-white);
   z-index: 3;
+  margin-left: 1cm;
 }
 .frame-child38 {
   width: 730px;
@@ -1444,6 +1450,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   max-width: 100%;
+
 }
 .chart-labels {
   align-self: stretch;
@@ -1467,6 +1474,7 @@
   gap: var(--gap-xs);
   z-index: 3;
   color: var(--color-darkslateblue-100);
+  margin-left: 1cm;
 }
 .history {
   flex: 1;
@@ -1976,20 +1984,19 @@
   box-sizing: border-box;
 }
 .summary {
-  align-self: stretch;
+  width: 100%;
+  height: 100%;
   background-color: var(--color-darkgreen-200);
-  border-top: 1px solid var(--color-gainsboro-200);
-  border-right: 350px solid var(--color-gainsboro-200);
-  border-bottom: 1px solid var(--color-gainsboro-200);
-  border-left: 1px solid var(--color-gainsboro-200);
+  box-sizing: border-box;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: var(--padding-9xl) 0 var(--padding-12xl);
+  margin: 0; /* Ensure no margin affects the layout */
+  padding: 0; /* Remove padding if it interferes with full size */
   gap: var(--gap-xl);
-  max-width: 100%;
   z-index: 2;
 }
+
 .dashboard2 {
   flex: 1;
   padding: var(--padding-12xs) 0 0;

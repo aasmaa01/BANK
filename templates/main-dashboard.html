@@ -14,6 +14,14 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
     />
+    <script>
+      // main-dashboard.js
+      document.addEventListener('DOMContentLoaded', function() {
+        // Fetch or initialize dashboard data if needed
+        console.log('Main dashboard loaded');
+      });
+
+    </script>
   </head>
   <body>
     <div class="main-dashboard">
@@ -708,7 +716,7 @@
                   <h3 class="investments6">Investments</h3>
                   <h3 class="credit-cards6">Credit Cards</h3>
                   <h3 class="loans4">Loans</h3>
-                  <a class="services4">Services</a>
+                  <a class="services4">Services</a> 
                   <h3 class="my-privileges4">My Privileges</h3>
                   <a class="setting4">Setting</a>
                 </div>
@@ -718,5 +726,40 @@
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Fetch and display loan details
+            $.getJSON('/loan/1', function(data) { // Assuming you want loan with ID 1
+                var loanHtml = '<h2>Loan Details</h2>';
+                if (data) {
+                    loanHtml += `<p>Loan ID: ${data.loan_id}</p>
+                                 <p>Client ID: ${data.client_id}</p>
+                                 <p>Loan Amount: ${data.loan_amount}</p>
+                                 <p>Interest Rate: ${data.interest_rate}</p>
+                                 <p>Start Date: ${data.start_date}</p>
+                                 <p>End Date: ${data.end_date}</p>
+                                 <p>Outstanding Balance: ${data.outstanding_balance}</p>`;
+                } else {
+                    loanHtml += '<p>No loan details available.</p>';
+                }
+                $('#loan-info').html(loanHtml);
+            });
+
+            // Fetch and display repayment details
+            $.getJSON('/repayment/1', function(data) { // Assuming you want repayment with ID 1
+                var repaymentHtml = '<h2>Repayment Details</h2>';
+                if (data) {
+                    repaymentHtml += `<p>Repayment ID: ${data.repayment_id}</p>
+                                      <p>Loan ID: ${data.loan_id}</p>
+                                      <p>Repayment Date: ${data.repayment_date}</p>
+                                      <p>Repayment Amount: ${data.repayment_amount}</p>`;
+                } else {
+                    repaymentHtml += '<p>No repayment details available.</p>';
+                }
+                $('#repayment-info').html(repaymentHtml);
+            });
+        });
+    </script>
   </body>
 </html>

@@ -12,6 +12,47 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script>
+      // signup.js
+      document.getElementById('signup-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const formData = {
+            id: document.getElementById('id').value,
+            username: document.getElementById('username').value,
+            password: document.getElementById('password').value,
+            first_name: document.getElementById('first_name').value,
+            last_name: document.getElementById('last_name').value,
+            date_of_birth: document.getElementById('date_of_birth').value,
+            address: document.getElementById('address').value,
+            phone_number: document.getElementById('phone_number').value,
+            email_address: document.getElementById('email_address').value,
+            nin_cust: document.getElementById('nin_cust').value,
+            rib_cust: document.getElementById('rib_cust').value,
+            agency_id: document.getElementById('agency_id').value,
+            registration_date: document.getElementById('registration_date').value
+        };
+
+        fetch('/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            document.getElementById('signup-form').reset();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred');
+        });
+      });
+
+    </script>
+    
   </head>
   <body>
     <div class="login">
@@ -79,7 +120,7 @@
         </div>
       </section>
       <section class="main-wrapper">
-        <form class="main" action="/signup" method="post">
+        <form class="main" >
           <div class="link-logo-charitfixpng-wrapper">
             <img
               class="link-logo-charitfixpng"
@@ -148,10 +189,60 @@
               <input name="agency_id" class="enter-your-email" placeholder="Enter Your Agency ID" type="text" required />
             </div>
           </div>
-          <button class="form-link1" type="submit">
+          <button class="form-link1" type="button" id="signupButton">
             <b class="login1">Sign Up</b>
-          </button>
+        </button>
         </form>
+        <script>
+          async function signup(userDetails) {
+            try {
+                const response = await fetch('/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(userDetails)
+                });
+        
+                const result = await response.json();
+                
+                console.log('Fetch response:', result); // Log the response
+        
+                if (response.ok) {
+                    console.log('Signup successful:', result.message);
+                    alert('Signup successful!');
+                } else {
+                    console.error('Signup failed:', result.error);
+                    alert('Signup failed: ' + result.error);
+                }
+            } catch (error) {
+                console.error('Error during signup:', error);
+                alert('An error occurred during signup.');
+            }
+        }
+        
+    
+          document.getElementById('signupButton').addEventListener('click', async function () {
+            console.log('Signup button clicked'); // Add this line to debug
+            const userDetails = {
+                email_address: document.getElementById('email_address').value,
+                password: document.getElementById('password').value,
+                date_of_birth: document.getElementById('date_of_birth').value,
+                username: document.getElementById('username').value,
+                first_name: document.getElementById('first_name').value,
+                last_name: document.getElementById('last_name').value,
+                address: document.getElementById('address').value,
+                phone_number: document.getElementById('phone_number').value,
+                nin_cust: document.getElementById('nin_cust').value,
+                rib_cust: document.getElementById('rib_cust').value,
+                agency_id: parseInt(document.getElementById('agency_id').value),
+                registration_date: document.getElementById('registration_date').value
+            };
+        
+            await signup(userDetails);
+        });
+        
+        </script>
       </section>
       <footer class="footer">
         <img class="before-icon" alt="" src="before@2x.png" />
@@ -313,5 +404,28 @@
         </div>
       </footer>
     </div>
+    <script>
+      document.getElementById('signup-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        const firstName = document.getElementById('first_name').value;
+        const lastName = document.getElementById('last_name').value;
+        const dateOfBirth = document.getElementById('date_of_birth').value;
+        const address = document.getElementById('address').value;
+        const phoneNumber = document.getElementById('phone_number').value;
+        const emailAddress = document.getElementById('email_address').value;
+        const ninCust = document.getElementById('nin_cust').value;
+        const ribCust = document.getElementById('rib_cust').value;
+        const agencyId = document.getElementById('agency_id').value;
+
+        if (!username || !firstName || !lastName || !dateOfBirth || !address || !phoneNumber || !emailAddress || !ninCust || !ribCust || !agencyId) {
+          alert('Please fill out all required fields.');
+          return;
+        }
+
+        // Perform the signup process here
+        alert('Form submitted successfully!');
+      });
+    </script>
   </body>
 </html>
