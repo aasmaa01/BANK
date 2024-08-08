@@ -14,12 +14,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
     />
-    <script>// setting-page.js
-      document.addEventListener('DOMContentLoaded', function() {
-          // Fetch or initialize settings data if needed
-          console.log('Settings page loaded');
-      });
-      </script>
   </head>
   <body>
     <div class="setting-page-3">
@@ -181,8 +175,8 @@
             <div class="profile-options1">
               <div class="general-settings">
                 <div class="general-settings-list">
-                  <div class="edit-profile2">Edit Profile</div>
-                  <a class="preferences2">Preferences</a>
+                 <a href="file:///C:/Users/dell/Desktop/bank-sys-test-main/templates/setting-page-1.html"class="edit-profile2">Edit Profile </a>
+                  <a href="file:///C:/Users/dell/Desktop/bank-sys-test-main/templates/setting-page-2.html" class="preferences2">Preferences</a>
                   <a class="security2">Security</a>
                 </div>
               </div>
@@ -235,7 +229,7 @@
               </div>
             </div>
             <div class="save-button">
-              <button class="rectangle-parent107">
+              <button class="rectangle-parent107" type="submit">
                 <div class="frame-child175"></div>
                 <div class="save2">Save</div>
               </button>
@@ -244,6 +238,42 @@
         </div>
       </section>
       <div class="content7"></div>
+      <script>
+        document.getElementById('save-button').addEventListener('click', function (event) {
+          event.preventDefault();
+  
+          const currentPassword = document.getElementById('current-password').value;
+          const newPassword = document.getElementById('new-password').value;
+  
+          if (!currentPassword || !newPassword) {
+            alert('Both current and new passwords are required.');
+            return;
+          }
+  
+          fetch('http://127.0.0.1:5000/change-password', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              current_password: currentPassword,
+              new_password: newPassword,
+            }),
+          })
+            .then(response => response.json())
+            .then(data => {
+              if (data.error) {
+                alert('Error: ' + data.error);
+              } else {
+                alert('Password changed successfully!');
+              }
+            })
+            .catch(error => {
+              console.error('Error:', error);
+              alert('An error occurred while changing the password.');
+            });
+        });
+      </script>
     </div>
   </body>
 </html>
