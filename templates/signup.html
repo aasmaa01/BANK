@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./login.css" />
     <link
@@ -12,47 +12,6 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script>
-      // signup.js
-      document.getElementById('signup-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const formData = {
-            id: document.getElementById('id').value,
-            username: document.getElementById('username').value,
-            password: document.getElementById('password').value,
-            first_name: document.getElementById('first_name').value,
-            last_name: document.getElementById('last_name').value,
-            date_of_birth: document.getElementById('date_of_birth').value,
-            address: document.getElementById('address').value,
-            phone_number: document.getElementById('phone_number').value,
-            email_address: document.getElementById('email_address').value,
-            nin_cust: document.getElementById('nin_cust').value,
-            rib_cust: document.getElementById('rib_cust').value,
-            agency_id: document.getElementById('agency_id').value,
-            registration_date: document.getElementById('registration_date').value
-        };
-
-        fetch('/signup', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert(data.message);
-            document.getElementById('signup-form').reset();
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('An error occurred');
-        });
-      });
-
-    </script>
-    
   </head>
   <body>
     <div class="login">
@@ -120,7 +79,7 @@
         </div>
       </section>
       <section class="main-wrapper">
-        <form class="main" >
+        <form class="main" id="signup-form">
           <div class="link-logo-charitfixpng-wrapper">
             <img
               class="link-logo-charitfixpng"
@@ -132,117 +91,85 @@
           <div class="form-group">
             <div class="form-label">Username</div>
             <div class="form-input">
-              <input name="username" class="enter-your-email" placeholder="Enter Your Username" type="text" required />
+              <input id="username" name="username" class="enter-your-email" placeholder="Enter Your Username" type="text" required />
             </div>
           </div>
           <div class="form-group">
             <div class="form-label">First Name</div>
             <div class="form-input">
-              <input name="first_name" class="enter-your-email" placeholder="Enter Your First Name" type="text" required />
+              <input id="firstName" name="first_name" class="enter-your-email" placeholder="Enter Your First Name" type="text" required />
             </div>
           </div>
           <div class="form-group">
             <div class="form-label">Last Name</div>
             <div class="form-input">
-              <input name="last_name" class="enter-your-email" placeholder="Enter Your Last Name" type="text" required />
+              <input id="lastName" name="last_name" class="enter-your-email" placeholder="Enter Your Last Name" type="text" required />
             </div>
           </div>
           <div class="form-group">
             <div class="form-label">Date of Birth</div>
             <div class="form-input">
-              <input name="date_of_birth" class="enter-your-email" placeholder="Enter Your Date of Birth" type="date" required />
+              <input id="dateOfBirth" name="date_of_birth" class="enter-your-email" placeholder="Enter Your Date of Birth" type="date" required />
             </div>
           </div>
           <div class="form-group">
             <div class="form-label">Address</div>
             <div class="form-input">
-              <input name="address" class="enter-your-email" placeholder="Enter Your Address" type="text" required />
+              <input id="address" name="address" class="enter-your-email" placeholder="Enter Your Address" type="text" required />
             </div>
           </div>
           <div class="form-group">
             <div class="form-label">Phone Number</div>
             <div class="form-input">
-              <input name="phone_number" class="enter-your-email" placeholder="Enter Your Phone Number" type="tel" required />
+              <input id="phoneNumber" name="phone_number" class="enter-your-email" placeholder="Enter Your Phone Number" type="tel" required />
             </div>
           </div>
           <div class="form-group">
             <div class="form-label">Email Address</div>
             <div class="form-input">
-              <input name="email_address" class="enter-your-email" placeholder="Enter Your Email Address" type="email" required />
+              <input id="emailAddress" name="email_address" class="enter-your-email" placeholder="Enter Your Email Address" type="email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label">Password</div>
+            <div class="form-input">
+              <input id="password" name="password" class="enter-your-email" placeholder="Enter Your Password" type="password" required />
             </div>
           </div>
           <div class="form-group">
             <div class="form-label">National Identification Number (NIN)</div>
             <div class="form-input">
-              <input name="nin_cust" class="enter-your-email" placeholder="Enter Your NIN" type="text" required />
+              <input id="ninCust" name="nin_cust" class="enter-your-email" placeholder="Enter Your NIN" type="text" required />
             </div>
           </div>
           <div class="form-group">
             <div class="form-label">RIB</div>
             <div class="form-input">
-              <input name="rib_cust" class="enter-your-email" placeholder="Enter Your RIB" type="text" required />
+              <input id="ribCust" name="rib_cust" class="enter-your-email" placeholder="Enter Your RIB" type="text" required />
             </div>
           </div>
           <div class="form-group">
-            <div class="form-label">Agency ID</div>
+            <div class="form-label">Agency Name</div>
             <div class="form-input">
-              <input name="agency_id" class="enter-your-email" placeholder="Enter Your Agency ID" type="text" required />
+              <input id="agencyName" name="agency_name" class="enter-your-email" placeholder="Enter Your Agency Name" type="text" required />
             </div>
           </div>
-          <button class="form-link1" type="button" id="signupButton">
+          <div class="form-group">
+            <div class="form-label">Agency Address</div>
+            <div class="form-input">
+              <input id="agencyAddress" name="agency_address" class="enter-your-email" placeholder="Enter Your Agency Address" type="text" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label">Wilaya Code</div>
+            <div class="form-input">
+              <input id="wilayaCode" name="wilaya_code" class="enter-your-email" placeholder="Enter Your Wilaya Code" type="text" required />
+            </div>
+          </div>
+          <button class="form-link1" type="button" onclick="handleSignup(event)">
             <b class="login1">Sign Up</b>
-        </button>
+          </button>
         </form>
-        <script>
-          async function signup(userDetails) {
-            try {
-                const response = await fetch('/signup', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(userDetails)
-                });
-        
-                const result = await response.json();
-                
-                console.log('Fetch response:', result); // Log the response
-        
-                if (response.ok) {
-                    console.log('Signup successful:', result.message);
-                    alert('Signup successful!');
-                } else {
-                    console.error('Signup failed:', result.error);
-                    alert('Signup failed: ' + result.error);
-                }
-            } catch (error) {
-                console.error('Error during signup:', error);
-                alert('An error occurred during signup.');
-            }
-        }
-        
-    
-          document.getElementById('signupButton').addEventListener('click', async function () {
-            console.log('Signup button clicked'); // Add this line to debug
-            const userDetails = {
-                email_address: document.getElementById('email_address').value,
-                password: document.getElementById('password').value,
-                date_of_birth: document.getElementById('date_of_birth').value,
-                username: document.getElementById('username').value,
-                first_name: document.getElementById('first_name').value,
-                last_name: document.getElementById('last_name').value,
-                address: document.getElementById('address').value,
-                phone_number: document.getElementById('phone_number').value,
-                nin_cust: document.getElementById('nin_cust').value,
-                rib_cust: document.getElementById('rib_cust').value,
-                agency_id: parseInt(document.getElementById('agency_id').value),
-                registration_date: document.getElementById('registration_date').value
-            };
-        
-            await signup(userDetails);
-        });
-        
-        </script>
       </section>
       <footer class="footer">
         <img class="before-icon" alt="" src="before@2x.png" />
@@ -266,7 +193,7 @@
                 <div class="nav-list4">Contact</div>
               </div>
             </div>
-            <button class="list-item-link">
+            <button class="list-item-link" >
               <b class="donate">Donate</b>
             </button>
           </div>
@@ -339,7 +266,7 @@
                   <div class="list-item16">12.Oct.2023</div>
                   <b class="list-item-container">
                     <p class="best-charity-marketing">
-                      <a style="color: #00715d;" href="https://badrbank.dz/demande-de-credit-particulier/">Demande de credit Particulier</a>
+                      <a style="color:#00715d ;" href="https://badrbank.dz/demande-de-credit-particulier/">Demande de credit Particulier</a>
                     </p>
                     <p class="champions"><a style="color: #00715d;" href="https://badrbank.dz/demande-de-credit-entreprise/">Entreprise</a></p>
                   </b>
@@ -405,27 +332,67 @@
       </footer>
     </div>
     <script>
-      document.getElementById('signup-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const username = document.getElementById('username').value;
-        const firstName = document.getElementById('first_name').value;
-        const lastName = document.getElementById('last_name').value;
-        const dateOfBirth = document.getElementById('date_of_birth').value;
-        const address = document.getElementById('address').value;
-        const phoneNumber = document.getElementById('phone_number').value;
-        const emailAddress = document.getElementById('email_address').value;
-        const ninCust = document.getElementById('nin_cust').value;
-        const ribCust = document.getElementById('rib_cust').value;
-        const agencyId = document.getElementById('agency_id').value;
-
-        if (!username || !firstName || !lastName || !dateOfBirth || !address || !phoneNumber || !emailAddress || !ninCust || !ribCust || !agencyId) {
-          alert('Please fill out all required fields.');
-          return;
+      async function handleSignup(event) {
+        event.preventDefault(); // Prevent default form submission
+    
+        // Collect user information
+        var username = document.getElementById('username').value;
+        var firstName = document.getElementById('firstName').value;
+        var lastName = document.getElementById('lastName').value;
+        var dateOfBirth = document.getElementById('dateOfBirth').value;
+        var address = document.getElementById('address').value;
+        var phoneNumber = document.getElementById('phoneNumber').value;
+        var emailAddress = document.getElementById('emailAddress').value;
+        var ninCust = document.getElementById('ninCust').value;
+        var ribCust = document.getElementById('ribCust').value;
+        var password = document.getElementById('password').value;
+    
+        // Collect agency information
+        var agencyName = document.getElementById('agencyName').value;
+        var agencyAddress = document.getElementById('agencyAddress').value;
+        var wilayaCode = document.getElementById('wilayaCode').value;
+    
+        try {
+          let response = await fetch('http://127.0.0.1:5001/signup', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              username: username,
+              first_name: firstName,
+              last_name: lastName,
+              date_of_birth: dateOfBirth,
+              address: address,
+              phone_number: phoneNumber,
+              email_address: emailAddress,
+              nin_cust: ninCust,
+              rib_cust: ribCust,
+              password: password,
+              agency_name: agencyName,
+              agency_address: agencyAddress,
+              wilaya_code: wilayaCode
+            })
+          });
+    
+          if (response.headers.get('content-type')?.includes('application/json')) {
+            let result = await response.json();
+            if (response.ok) {
+              alert('Signup successful');
+              window.location.href = 'file:///C:/Users/dell/Desktop/bank-sys-test-main/templates/login.html';
+            } else {
+              alert('Signup failed: ' + result.error);
+            }
+          } else {
+            let text = await response.text();
+            console.error('Unexpected response:', text);
+            alert('An error occurred. Please check the console for details.');
+          }
+        } catch (error) {
+          alert('An error occurred: ' + error.message);
         }
-
-        // Perform the signup process here
-        alert('Form submitted successfully!');
-      });
+      }
     </script>
+    
   </body>
 </html>
