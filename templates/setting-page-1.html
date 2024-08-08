@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -14,12 +13,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
     />
-    <script>// setting-page.js
-      document.addEventListener('DOMContentLoaded', function() {
-          // Fetch or initialize settings data if needed
-          console.log('Settings page loaded');
-      });
-      </script>
   </head>
   <body>
     <div class="setting-page-1">
@@ -35,10 +28,12 @@
               alt=""
               src="./public/banque-de-lagriculture-et-du-dveloppement-ruralsvg-11@2x.png"
             />
-
-            <div class="badr-bank-frame">
-              <a class="badr-bank8">Badr Bank</a>
-            </div>
+            <a
+              class="badr-bank5"
+              href="file:///C:/Users/dell/Desktop/bank-sys-test-main/templates/main-dashboard.html"
+            >
+              Badr Bank
+            </a>
           </div>
         </div>
         <div class="frame-parent36">
@@ -54,7 +49,6 @@
                   alt=""
                   src="./public/magnifyingglass-1.svg"
                 />
-
                 <div class="search-for-something-frame">
                   <a class="search-for-something7">Search for something</a>
                 </div>
@@ -97,35 +91,30 @@
                   alt=""
                   src="./public/home-2.svg"
                 />
-
                 <img
                   class="transfer-1-icon7"
                   loading="lazy"
                   alt=""
                   src="./public/transfer-1.svg"
                 />
-
                 <img
                   class="user-3-17"
                   loading="lazy"
                   alt=""
                   src="./public/user-3-11.svg"
                 />
-
                 <img
                   class="economic-investment-1-icon7"
                   loading="lazy"
                   alt=""
                   src="./public/economicinvestment-1.svg"
                 />
-
                 <img
                   class="credit-card-1-icon10"
                   loading="lazy"
                   alt=""
                   src="./public/creditcard-1.svg"
                 />
-
                 <div class="financial-goals-title">
                   <img
                     class="loan-1-icon7"
@@ -184,8 +173,9 @@
               <div class="edit-options-wrapper">
                 <div class="edit-options">
                   <div class="edit-profile">Edit Profile</div>
-                  <a class="preferences">Preferences</a>
-                  <a class="security">Security</a>
+                  <a href="file:///C:/Users/dell/Desktop/bank-sys-test-main/templates/setting-page-2.html" class="preferences">Preferences</a>
+
+                  <a href="file:///C:/Users/dell/Desktop/bank-sys-test-main/templates/setting-page-3.html" class="security">Security</a>
                 </div>
               </div>
               <div class="frame-child139"></div>
@@ -193,42 +183,74 @@
             <div class="frame-child140"></div>
             <div class="profile-details">
               <div class="profile-details-inner">
+                <!-- Profile picture -->
                 <img
+                  id="profileImage"
                   class="frame-child141"
                   loading="lazy"
-                  alt=""
+                  alt="Profile Picture"
                   src="./public/group-206@2x.png"
+                  onclick="document.getElementById('profilePicture').click();" 
+                  style="cursor: pointer;"
+                />
+                <input
+                  type="file"
+                  id="profilePicture"
+                  name="profile_picture"
+                  style="display: none;"
+                  accept="image/*"
                 />
               </div>
-              <form class="personal-info">
+              <form
+                class="personal-info" id="profileForm"
+              >
                 <div class="personal-info-fields">
                   <div class="personal-info-field-labels">
-                    <div class="your-name">Your Name</div>
+                    <div class="your-name">First Name</div>
                     <div class="rectangle-parent83">
                       <div class="frame-child142"></div>
                       <input
                         class="charlene-reed"
-                        placeholder="Charlene Reed "
+                        placeholder="enter your First name"
                         type="text"
+                        name="first_name"
                       />
                     </div>
                   </div>
                   <div class="edit-profile-button">
-                    <a class="email">Email</a>
+                    <a class="email">Username</a>
                     <div class="rectangle-parent84">
                       <div class="frame-child143"></div>
                       <input
                         class="charlenereedgmailcom"
-                        placeholder="charlenereed@gmail.com "
+                        placeholder="enter your Username"
                         type="text"
+                        name="username"
                       />
                     </div>
+                     <div class="account-info-field-labels2">
+                    <div class="present-address">Email</div>
+                    <div class="rectangle-parent90">
+                      <div class="frame-child149"></div>
+                      <input
+                        class="san-jose-california1"
+                        placeholder="exemple@gmail.com"
+                        type="email"
+                        name="email_address"
+                      />
+                    </div>
+                  </div>
                   </div>
                   <div class="personal-info-field-labels1">
                     <div class="date-of-birth">Date of Birth</div>
                     <div class="rectangle-parent85">
                       <div class="frame-child144"></div>
-                      <div class="january-1990">25 January 1990</div>
+                      <input
+                        class="january-1990"
+                        placeholder="enter your date of birth"
+                        type="date"
+                        name="date_of_birth"
+                      />
                       <div class="name-icon-wrapper">
                         <img
                           class="name-icon"
@@ -239,33 +261,28 @@
                     </div>
                   </div>
                   <div class="personal-info-field-labels2">
-                    <div class="permanent-address">Permanent Address</div>
+                    <div class="permanent-address">NiN CUST</div>
                     <div class="rectangle-parent86">
                       <div class="frame-child145"></div>
                       <input
                         class="san-jose-california"
-                        placeholder="San Jose, California, USA"
+                        placeholder="enter your NiN CUST"
                         type="text"
+                        name="NIN_cust"
                       />
-                    </div>
-                  </div>
-                  <div class="personal-info-field-labels3">
-                    <div class="postal-code">Postal Code</div>
-                    <div class="rectangle-parent87">
-                      <div class="frame-child146"></div>
-                      <input class="input" placeholder="45962" type="text" />
                     </div>
                   </div>
                 </div>
                 <div class="account-info-fields">
                   <div class="account-info-field-labels">
-                    <a class="user-name">User Name</a>
+                    <a class="user-name">Last Name</a>
                     <div class="rectangle-parent88">
                       <div class="frame-child147"></div>
                       <input
                         class="charlene-reed1"
-                        placeholder="Charlene Reed "
+                        placeholder="enter your Last name"
                         type="text"
+                        name="last_name"
                       />
                     </div>
                   </div>
@@ -276,7 +293,8 @@
                       <input
                         class="input1"
                         placeholder="**********"
-                        type="text"
+                        type="password"
+                        name="password"
                       />
                     </div>
                   </div>
@@ -286,30 +304,37 @@
                       <div class="frame-child149"></div>
                       <input
                         class="san-jose-california1"
-                        placeholder="San Jose, California, USA"
+                        placeholder="enter your adresse"
                         type="text"
+                        name="address"
                       />
                     </div>
                   </div>
                   <div class="account-info-field-labels3">
-                    <div class="city">City</div>
+                    <div class="city">Phone Number</div>
                     <div class="rectangle-parent91">
                       <div class="frame-child150"></div>
                       <input
                         class="san-jose"
-                        placeholder="San Jose"
+                        placeholder="enter your Phone Number"
                         type="text"
+                        name="phone_number"
                       />
                     </div>
                   </div>
                   <div class="account-info-field-labels4">
-                    <div class="country">Country</div>
+                    <div class="country">RIB CUST</div>
                     <div class="rectangle-parent92">
                       <div class="frame-child151"></div>
-                      <input class="usa" placeholder="USA" type="text" />
+                      <input
+                        class="usa"
+                        placeholder="enter your RIB CUST"
+                        type="text"
+                        name="Rib_cust"
+                      />
                     </div>
                   </div>
-                  <button class="rectangle-parent93">
+                  <button class="rectangle-parent93" type="submit">
                     <div class="frame-child152"></div>
                     <div class="save">Save</div>
                   </button>
@@ -320,6 +345,54 @@
         </section>
       </main>
       <div class="separator4"></div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Handle profile picture change
+          document.getElementById("profilePicture").addEventListener("change", function () {
+            const profilePictureInput = this;
+            if (profilePictureInput.files && profilePictureInput.files[0]) {
+              const reader = new FileReader();
+              reader.onload = function (e) {
+                document.getElementById("profileImage").src = e.target.result;
+              };
+              reader.readAsDataURL(profilePictureInput.files[0]);
+            }
+          });
+        
+          // Handle form submission
+          document.getElementById("profileForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+        
+            const formData = new FormData(this);
+        
+            try {
+              const response = await fetch("http://127.0.0.1:5001/update-profile", {
+                method: "POST",
+                body: formData,
+                credentials: 'include'  // Include cookies with the request to maintain session
+              });
+        
+              const result = await response.json();
+        
+              if (response.ok) {
+                alert("Profile updated successfully!");
+              } else {
+                console.log("Error response:", result);
+                alert("Error updating profile: " + (result.message || result.error || "Unexpected error occurred"));
+              }
+            } catch (error) {
+              console.error("An error occurred:", error);
+              alert("An error occurred: " + error.message);
+            }
+          });
+        
+          // Trigger file input click on image click
+          document.getElementById("profileImage").addEventListener("click", function () {
+            document.getElementById("profilePicture").click();
+          });
+        });
+        </script>
+         
     </div>
   </body>
 </html>
