@@ -1,2659 +1,727 @@
-.background {
-  position: absolute;
-  top: 0;
-  left: 249px;
-  background-color: var(--color-aliceblue-300);
-  width: 1px;
-  height: 1184px;
-  z-index: 2;
-}
-.overview {
-  text-decoration: none;
-  height: 42.4px;
-  position: relative;
-  font-weight: 600;
-  color: inherit;
-  display: inline-block;
-  flex-shrink: 0;
-  min-width: 129.1px;
-  white-space: nowrap;
-}
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-6xl) 0 0;
-}
-.frame-child70 {
-  height: 62.3px;
-  width: 255.2px;
-  position: relative;
-  border-radius: var(--br-21xl);
-  background-color: var(--color-whitesmoke-100);
-  display: none;
-}
-.magnifying-glass-1-icon4 {
-  height: 24.9px;
-  width: 20px;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-  min-height: 25px;
-  z-index: 1;
-}
-.search-for-something4 {
-  text-decoration: none;
-  position: relative;
-  font-size: var(--button-2-medium-15p-size);
-  font-family: var(--heading-four-semibold-20p);
-  color: var(--color-lightsteelblue);
-  text-align: left;
-  white-space: nowrap;
-  z-index: 1;
-}
-.search-placeholder1 {
-  flex-direction: column;
-  padding: 1.3px 0 0;
-}
-.rectangle-parent46,
-.search-placeholder1,
-.search1 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.rectangle-parent46 {
-  cursor: pointer;
-  border: 0;
-  padding: 18.7px var(--padding-6xl);
-  background-color: var(--color-whitesmoke-100);
-  align-self: stretch;
-  border-radius: var(--br-21xl);
-  flex-direction: row;
-  gap: var(--gap-mini);
-}
-.search1 {
-  flex: 1;
-  flex-direction: column;
-  padding: var(--padding-6xs-2) 0 0;
-}
-.menu-icons-child {
-  align-self: stretch;
-  flex: 1;
-  position: relative;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.menu-icons5 {
-  height: 68.5px;
-  width: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-6xs-2) 0 0;
-  box-sizing: border-box;
-}
-.menu-icons-item {
-  align-self: stretch;
-  flex: 1;
-  position: relative;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-}
-.menu-icons6 {
-  height: 68.5px;
-  width: 55.1px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-6xs-2) var(--padding-8xs) 0 0;
-  box-sizing: border-box;
-}
-.mask-group-icon4 {
-  height: 74.8px;
-  width: 60.1px;
-  position: relative;
-  object-fit: cover;
-}
-.menu-items1 {
-  width: 510.5px;
-  justify-content: flex-start;
-  gap: var(--gap-11xl);
-}
-.logo-container-parent,
-.menu-items1,
-.navigation1 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  max-width: 100%;
-}
-.logo-container-parent {
-  flex: 1;
-  justify-content: space-between;
-  gap: var(--gap-xl);
-  text-align: left;
-  font-size: var(--heading-one-semibold-28p-size);
-  color: var(--primary-2);
-  font-family: var(--heading-four-semibold-20p);
-}
-.navigation1 {
-  width: 100%;
-  align-self: stretch;
-  justify-content: flex-start;
-  padding: 0 var(--padding-21xl) 0 var(--padding-19xl);
-  box-sizing: border-box;
-}
-.bg,
-.content-top-divider {
-  align-self: stretch;
-  position: relative;
-}
-.bg {
-  height: 1083px;
-  background: linear-gradient(rgba(240, 234, 234, 0), rgba(240, 234, 234, 0)),
-    linear-gradient(rgba(49, 220, 56, 0.2), rgba(49, 220, 56, 0.2)), #0d0d0d;
-  display: none;
-}
-.content-top-divider {
-  height: 1.2px;
-  background-color: var(--color-aliceblue-300);
-  z-index: 1;
-}
-.my-cards3 {
-  text-decoration: none;
-  position: relative;
-  font-weight: 600;
-  color: inherit;
-  display: inline-block;
-  min-width: 102px;
-  z-index: 1;
-}
-.frame-child71 {
-  align-self: stretch;
-  height: 235px;
-  position: relative;
-  border-radius: var(--br-6xl);
-  background: linear-gradient(107.38deg, #51d46e 27.92%, #0b5718);
-  display: none;
-}
-.account-balance-value,
-.balance7 {
-  position: relative;
-  display: inline-block;
-  min-width: 42px;
-  z-index: 1;
-}
-.account-balance-value {
-  font-size: var(--heading-four-semibold-20p-size);
-  min-width: 63px;
-  white-space: nowrap;
-}
-.balance-value2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.card-holder7,
-.eddy-cusuma6 {
-  position: relative;
-  display: inline-block;
-  min-width: 85px;
-  z-index: 1;
-}
-.eddy-cusuma6 {
-  font-size: var(--button-2-medium-15p-size);
-  color: var(--color-white);
-  min-width: 91px;
-}
-.balance-row,
-.holder-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.holder-info {
-  gap: var(--gap-10xs-9);
-  color: var(--color-gray-200);
-}
-.balance-row {
-  gap: var(--gap-14xl);
-  min-width: 91px;
-}
-.chip-card-icon6 {
-  width: 34.8px;
-  height: 34.8px;
-  position: relative;
-  object-fit: cover;
-  flex-shrink: 0;
-  z-index: 1;
-}
-.account-validity-value,
-.valid-thru6 {
-  position: relative;
-  display: inline-block;
-  min-width: 70px;
-  z-index: 1;
-}
-.account-validity-value {
-  font-size: var(--button-2-medium-15p-size);
-  color: var(--color-white);
-  min-width: 42px;
-}
-.validity-row {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--gap-10xs-9);
-  flex-shrink: 0;
-}
-.card-image1,
-.validity-row,
-.validity1 {
-  display: flex;
-  justify-content: flex-start;
-}
-.validity1 {
-  align-self: stretch;
-  flex-direction: row;
-  align-items: flex-start;
-}
-.card-image1 {
-  width: 142.8px;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 35.2px;
-  min-width: 142.8px;
-  color: var(--color-gray-200);
-}
-.balance-container1 {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: var(--gap-xl);
-}
-.balance-info2 {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 var(--padding-5xl) 0 var(--padding-7xl);
-}
-.frame-child72 {
-  height: 70px;
-  width: 350px;
-  position: relative;
-  border-radius: 0 0 var(--br-6xl) var(--br-6xl);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.15),
-    rgba(255, 255, 255, 0)
-  );
-  display: none;
-  max-width: 100%;
-}
-.account-activity-placeholder {
-  position: relative;
-  z-index: 1;
-}
-.see-all-button {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-11xs) 0 0;
-}
-.frame-child73 {
-  align-self: stretch;
-  width: 44px;
-  position: relative;
-  max-height: 100%;
-  min-height: 30px;
-  z-index: 1;
-}
-.rectangle-parent47,
-.rectangle-parent48 {
-  align-self: stretch;
-  display: flex;
-  box-sizing: border-box;
-  max-width: 100%;
-  z-index: 1;
-}
-.rectangle-parent48 {
-  border-radius: 0 0 var(--br-6xl) var(--br-6xl);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.15),
-    rgba(255, 255, 255, 0)
-  );
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: var(--padding-xl) var(--padding-5xl) var(--padding-xl)
-    var(--padding-7xl);
-  gap: var(--gap-xl);
-  font-size: var(--heading-two-semibold-22p-size);
-}
-.rectangle-parent47 {
-  border-radius: var(--br-6xl);
-  background: linear-gradient(107.38deg, #51d46e 27.92%, #0b5718);
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: var(--padding-5xl) 0 0;
-  gap: 35.1px;
-  font-size: var(--font-size-xs);
-  color: var(--color-white);
-  font-family: var(--font-lato);
-}
-.weekly-activity {
-  margin: 0;
-  position: relative;
-  font-size: inherit;
-  font-weight: 600;
-  font-family: inherit;
-  color: #f0f1fa;
-  z-index: 1;
-}
-.card-header1 {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-3xl);
-  min-width: 227px;
-  max-width: 100%;
-}
-.span {
-  color: #81ef5b;
-}
-.see-all1 {
-  text-decoration: none;
-  position: relative;
-  font-weight: 600;
-  display: inline-block;
-  min-width: 57px;
-  z-index: 1;
-  color: inherit;
-}
-.second-card-header {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 var(--padding-6xs);
-}
-.frame-child74 {
-  align-self: stretch;
-  height: 235px;
-  position: relative;
-  border-radius: var(--br-6xl);
-  background: linear-gradient(
-    180deg,
-    #989899 0.5%,
-    #fff 69.5%,
-    #b1b1b1 85%,
-    #232323
-  );
-  border: 1px solid var(--color-aliceblue-400);
-  box-sizing: border-box;
-  display: none;
-}
-.balance-value3,
-.balance8 {
-  position: relative;
-  display: inline-block;
-  min-width: 42px;
-  z-index: 1;
-}
-.balance-value3 {
-  font-size: var(--heading-four-semibold-20p-size);
-  color: var(--primary-2);
-  min-width: 63px;
-  white-space: nowrap;
-}
-.second-balance-value {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.card-holder8,
-.eddy-cusuma7 {
-  position: relative;
-  display: inline-block;
-  min-width: 85px;
-  z-index: 1;
-}
-.eddy-cusuma7 {
-  font-size: var(--button-2-medium-15p-size);
-  color: var(--primary-2);
-  min-width: 91px;
-}
-.second-balance-row,
-.second-holder-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-10xs-9);
-}
-.second-balance-row {
-  gap: var(--gap-10xl);
-  min-width: 91px;
-}
-.chip-card-icon7 {
-  width: 34.8px;
-  height: 34.8px;
-  position: relative;
-  object-fit: contain;
-  flex-shrink: 0;
-  z-index: 1;
-}
-.valid-thru-value,
-.valid-thru7 {
-  position: relative;
-  display: inline-block;
-  min-width: 70px;
-  z-index: 1;
-}
-.valid-thru-value {
-  font-size: var(--button-2-medium-15p-size);
-  color: var(--primary-2);
-  min-width: 42px;
-}
-.second-validity-row {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--gap-10xs-9);
-  flex-shrink: 0;
-}
-.second-card-image,
-.second-validity,
-.second-validity-row {
-  display: flex;
-  justify-content: flex-start;
-}
-.second-validity {
-  align-self: stretch;
-  flex-direction: row;
-  align-items: flex-start;
-}
-.second-card-image {
-  width: 142.8px;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: var(--gap-12xl-2);
-  min-width: 142.8px;
-}
-.second-balance-container {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: var(--gap-xl);
-}
-.second-balance-info {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 var(--padding-5xl) 0 var(--padding-7xl);
-}
-.frame-child75 {
-  height: 70px;
-  width: 350px;
-  position: relative;
-  border-radius: 0 0 var(--br-6xl) var(--br-6xl);
-  border: 1px solid var(--color-aliceblue-500);
-  box-sizing: border-box;
-  display: none;
-  max-width: 100%;
-}
-.b8 {
-  position: relative;
-  z-index: 2;
-}
-.second-see-all-button {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-11xs) 0 0;
-}
-.frame-child76 {
-  align-self: stretch;
-  width: 44px;
-  position: relative;
-  max-height: 100%;
-  min-height: 30px;
-  z-index: 2;
-}
-.rectangle-parent49,
-.rectangle-parent50 {
-  align-self: stretch;
-  box-sizing: border-box;
-  z-index: 1;
-}
-.rectangle-parent50 {
-  border-radius: 0 0 var(--br-6xl) var(--br-6xl);
-  border: 1px solid var(--color-aliceblue-500);
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: var(--padding-lg) var(--padding-6xl);
-  max-width: 100%;
-  gap: var(--gap-xl);
-  font-size: var(--heading-two-semibold-22p-size);
-  color: var(--primary-2);
-}
-.rectangle-parent49 {
-  border-radius: var(--br-6xl);
-  background: linear-gradient(
-    180deg,
-    #989899 0.5%,
-    #fff 69.5%,
-    #b1b1b1 85%,
-    #232323
-  );
-  border: 1px solid var(--color-aliceblue-400);
-  flex-direction: column;
-  align-items: flex-end;
-  padding: var(--padding-3xl) 0 0;
-  gap: var(--gap-20xl-1);
-  text-align: left;
-  font-size: var(--font-size-xs);
-  color: var(--color-steelblue);
-  font-family: var(--font-lato);
-}
-.card-content1,
-.rectangle-parent49,
-.second-card,
-.second-card-content {
-  display: flex;
-  justify-content: flex-start;
-  max-width: 100%;
-}
-.second-card-content {
-  align-self: stretch;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: var(--gap-2xl);
-}
-.card-content1,
-.second-card {
-  align-items: flex-start;
-}
-.second-card {
-  flex: 1;
-  flex-direction: column;
-  padding: var(--padding-8xs) 0 0;
-  box-sizing: border-box;
-  min-width: 227px;
-  text-align: right;
-  font-size: var(--font-size-mid);
-  color: var(--color-whitesmoke-400);
-}
-.card-content1 {
-  align-self: stretch;
-  flex-direction: row;
-  gap: var(--gap-11xl);
-}
-.frame-child77 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: var(--br-6xl);
-  background-color: var(--color-white);
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-.chart-bars2,
-.chart-bars3,
-.chart-bars4,
-.chart-bars5 {
-  position: absolute;
-  top: 113px;
-  left: 69px;
-  background-color: var(--color-whitesmoke-300);
-  width: 631px;
-  height: 1px;
-  z-index: 1;
-}
-.chart-bars3,
-.chart-bars4,
-.chart-bars5 {
-  top: 150px;
-}
-.chart-bars4,
-.chart-bars5 {
-  top: 187px;
-}
-.chart-bars5 {
-  top: 224px;
-}
-.chart-legend-item,
-.chart-legend-items {
-  position: relative;
-  display: inline-block;
-  min-width: 25px;
-  z-index: 1;
-}
-.icon-placeholder {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 0 0 var(--padding-12xs);
-}
-.div35 {
-  position: relative;
-  display: inline-block;
-  min-width: 25px;
-  z-index: 1;
-}
-.icon-placeholder1 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 0 0 var(--padding-12xs);
-}
-.chart-legend-items1,
-.chart-legend-items2,
-.div36 {
-  position: relative;
-  display: inline-block;
-  min-width: 25px;
-  z-index: 1;
-}
-.chart-legend-items2,
-.div36 {
-  min-width: 23px;
-}
-.div36 {
-  min-width: 9px;
-}
-.icon-placeholder2,
-.type-icons {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.icon-placeholder2 {
-  flex-direction: row;
-  padding: 0 var(--padding-10xs) 0 var(--padding-sm);
-}
-.type-icons {
-  position: absolute;
-  top: 68px;
-  left: 33px;
-  flex-direction: column;
-  gap: var(--gap-2xl);
-}
-.graph-dots {
-  width: 15px;
-  height: 15px;
-  position: relative;
-  border-radius: 50%;
-  background-color: var(--color-turquoise);
-  z-index: 1;
-}
-.amount-circles {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-11xs) 0 0;
-}
-.diposit {
-  position: relative;
-  display: inline-block;
-  min-width: 50px;
-  z-index: 1;
-}
-.transaction-amounts {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-3xs);
-}
-.frame-child78 {
-  width: 15px;
-  height: 15px;
-  position: relative;
-  border-radius: 50%;
-  background-color: var(--color-palevioletred);
-  z-index: 1;
-}
-.transaction-amounts-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-11xs) 0 0;
-}
-.withdraw {
-  position: relative;
-  display: inline-block;
-  min-width: 68px;
-  z-index: 1;
-}
-.transaction-amounts1,
-.transaction-summary {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-3xs);
-}
-.transaction-summary {
-  padding: 0 0 var(--padding-sm);
-  gap: var(--gap-11xl);
-}
-.graph-container-child {
-  align-self: stretch;
-  height: 1px;
-  position: relative;
-  background-color: var(--color-whitesmoke-300);
-  z-index: 1;
-}
-.bar-containers-child,
-.bar-containers-item {
-  width: 15px;
-  position: relative;
-  border-radius: var(--br-11xl);
-  z-index: 2;
-}
-.bar-containers-child {
-  align-self: stretch;
-  background-color: var(--color-blue-200);
-}
-.bar-containers-item {
-  height: 91px;
-  background-color: var(--color-turquoise);
-}
-.bar-containers {
-  height: 178px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-xs);
-}
-.bar-containers-child1,
-.bar-containers-inner {
-  width: 15px;
-  position: relative;
-  border-radius: var(--br-11xl);
-  z-index: 2;
-}
-.bar-containers-inner {
-  align-self: stretch;
-  background-color: var(--color-blue-200);
-}
-.bar-containers-child1 {
-  height: 49px;
-  background-color: var(--color-turquoise);
-}
-.bar-containers1 {
-  height: 130px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-xs);
-}
-.bar-containers-child2,
-.bar-containers-child3 {
-  width: 15px;
-  position: relative;
-  border-radius: var(--br-11xl);
-  z-index: 2;
-}
-.bar-containers-child2 {
-  align-self: stretch;
-  background-color: var(--color-blue-200);
-}
-.bar-containers-child3 {
-  height: 98px;
-  background-color: var(--color-turquoise);
-}
-.bar-containers2 {
-  height: 122px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-xs);
-}
-.bar-containers-child4,
-.bar-containers-child5 {
-  width: 15px;
-  position: relative;
-  border-radius: var(--br-11xl);
-  z-index: 2;
-}
-.bar-containers-child4 {
-  align-self: stretch;
-  background-color: var(--color-blue-200);
-}
-.bar-containers-child5 {
-  height: 138px;
-  background-color: var(--color-turquoise);
-}
-.bar-containers3 {
-  height: 178px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-xs);
-}
-.bar-containers-child6,
-.bar-containers-child7 {
-  width: 15px;
-  position: relative;
-  border-radius: var(--br-11xl);
-  z-index: 2;
-}
-.bar-containers-child6 {
-  height: 57px;
-  background-color: var(--color-blue-200);
-}
-.bar-containers-child7 {
-  align-self: stretch;
-  background-color: var(--color-turquoise);
-}
-.bar-containers4 {
-  height: 91px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-xs);
-}
-.bar-containers-child8,
-.bar-containers-child9 {
-  width: 15px;
-  position: relative;
-  border-radius: var(--br-11xl);
-  z-index: 2;
-}
-.bar-containers-child8 {
-  align-self: stretch;
-  background-color: var(--color-blue-200);
-}
-.bar-containers-child9 {
-  height: 91px;
-  background-color: var(--color-turquoise);
-}
-.bar-containers5 {
-  height: 145px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-xs);
-}
-.bar-containers-child10,
-.bar-containers-child11 {
-  width: 15px;
-  position: relative;
-  border-radius: var(--br-11xl);
-  z-index: 2;
-}
-.bar-containers-child10 {
-  align-self: stretch;
-  background-color: var(--color-blue-200);
-}
-.bar-containers-child11 {
-  height: 126px;
-  background-color: var(--color-turquoise);
-}
-.bar-containers6,
-.graph-bars {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-}
-.bar-containers6 {
-  height: 147px;
-  justify-content: flex-start;
-  gap: var(--gap-xs);
-}
-.graph-bars {
-  flex: 1;
-  justify-content: space-between;
-  max-width: 100%;
-  gap: var(--gap-xl);
-}
-.graph-container,
-.graph-content {
-  align-self: stretch;
-  display: flex;
-  max-width: 100%;
-}
-.graph-content {
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 var(--padding-5xl) 0 var(--padding-6xl);
-  box-sizing: border-box;
-}
-.graph-container {
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-7xs);
-}
-.balance-separator {
-  align-self: stretch;
-  height: 1px;
-  position: relative;
-  background-color: var(--color-whitesmoke-300);
-  z-index: 1;
-}
-.transaction-graph {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  max-width: 100%;
-}
-.sat1 {
-  position: relative;
-  display: inline-block;
-  min-width: 21px;
-  z-index: 1;
-}
-.day-values {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-10xs) 0 0;
-}
-.mon1,
-.sun1,
-.thu1,
-.tue1,
-.wed1 {
-  position: relative;
-  display: inline-block;
-  min-width: 24px;
-  z-index: 1;
-}
-.mon1,
-.thu1,
-.tue1,
-.wed1 {
-  min-width: 27px;
-}
-.thu1,
-.tue1,
-.wed1 {
-  min-width: 23px;
-}
-.thu1,
-.wed1 {
-  min-width: 28px;
-}
-.thu1 {
-  min-width: 24px;
-}
-.day-values1 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-7xs) 0 0;
-}
-.fri1 {
-  position: relative;
-  display: inline-block;
-  min-width: 16px;
-  z-index: 1;
-}
-.day-labels,
-.graph-days {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  box-sizing: border-box;
-  max-width: 100%;
-}
-.day-labels {
-  flex: 1;
-  justify-content: space-between;
-  padding: 0 var(--padding-11xs) 0 0;
-  gap: var(--gap-xl);
-}
-.graph-days {
-  align-self: stretch;
-  justify-content: flex-end;
-  padding: 0 var(--padding-18xl) 0 var(--padding-17xl);
-  text-align: center;
-  font-size: var(--body-small-1-size);
-}
-.transaction-details6 {
-  position: absolute;
-  top: 28px;
-  left: 69px;
-  width: 631px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-base);
-  max-width: 100%;
-  text-align: left;
-  font-size: var(--button-2-medium-15p-size);
-}
-.rectangle-parent51 {
-  height: 322px;
-  flex: 1;
-  position: relative;
-  border-radius: var(--br-6xl);
-  background-color: var(--color-white);
-  max-width: 100%;
-  z-index: 1;
-}
-.transactions16 {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 0 var(--padding-7xs);
-  box-sizing: border-box;
-  max-width: 100%;
-  text-align: right;
-  font-size: var(--body-small-1-size);
-  color: var(--color-steelblue);
-}
-.balance-history,
-.quick-transfer {
-  margin: 0;
-  position: relative;
-  font-size: inherit;
-  font-weight: 600;
-  font-family: inherit;
-  z-index: 1;
-}
-.balance-history {
-  color: #f0f1f8;
-}
-.card-item,
-.transfer-history {
-  display: flex;
-  align-items: flex-start;
-  max-width: 100%;
-}
-.transfer-history {
-  width: 643px;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: var(--gap-xl);
-  color: var(--color-gainsboro-300);
-}
-.card-item {
-  flex: 1;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: var(--gap-lg);
-}
-.recent-transaction {
-  text-decoration: none;
-  position: relative;
-  font-weight: 600;
-  color: inherit;
-  z-index: 1;
-}
-.frame-child79 {
-  height: 235px;
-  width: 350px;
-  position: relative;
-  border-radius: var(--br-6xl);
-  background-color: var(--color-white);
-  display: none;
-  max-width: 100%;
-}
-.activity-items-child,
-.activity-items-inner,
-.activity-items-item {
-  width: 55px;
-  height: 55px;
-  position: relative;
-  z-index: 1;
-}
-.activity-items {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-3xs);
-}
-.deposit-from-my,
-.transaction-navigation-icon {
-  position: relative;
-  font-weight: 500;
-  z-index: 1;
-}
-.transaction-navigation-icon {
-  display: inline-block;
-  min-width: 49px;
-}
-.transaction-info1,
-.transaction-months {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.transaction-months {
-  flex-direction: column;
-  padding: var(--padding-xs) 0 0;
-  text-align: right;
-  color: #ff4b4a;
-}
-.transaction-info1 {
-  align-self: stretch;
-  flex-direction: row;
-  gap: var(--gap-smi);
-}
-.january-2021 {
-  position: relative;
-  font-size: var(--button-2-medium-15p-size);
-  color: var(--color-steelblue);
-  display: inline-block;
-  min-width: 119px;
-  z-index: 1;
-  margin-top: -5px;
-}
-.transaction-detail {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.deposit-paypal,
-.january-20211 {
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-}
-.deposit-paypal {
-  font-weight: 500;
-  min-width: 115px;
-}
-.january-20211 {
-  font-size: var(--button-2-medium-15p-size);
-  color: var(--color-steelblue);
-  min-width: 118px;
-}
-.deposit-paypal-parent {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-6xs);
-}
-.div37 {
-  position: relative;
-  font-weight: 500;
-  display: inline-block;
-  min-width: 66px;
-  z-index: 1;
-}
-.transaction-detail1,
-.wrapper11 {
-  display: flex;
-  align-items: flex-start;
-}
-.wrapper11 {
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: var(--padding-xs) 0 0;
-  text-align: right;
-  color: var(--color-mediumaquamarine);
-}
-.transaction-detail1 {
-  align-self: stretch;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: var(--gap-xl);
-}
-.january-20212,
-.jemi-wilson {
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-}
-.jemi-wilson {
-  font-weight: 500;
-  min-width: 92px;
-}
-.january-20212 {
-  font-size: var(--button-2-medium-15p-size);
-  color: var(--color-steelblue);
-  min-width: 116px;
-}
-.jemi-wilson-parent {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-6xs);
-}
-.div38 {
-  position: relative;
-  font-weight: 500;
-  display: inline-block;
-  min-width: 67px;
-  z-index: 1;
-}
-.transaction-detail2,
-.wrapper12 {
-  display: flex;
-  align-items: flex-start;
-}
-.wrapper12 {
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: var(--padding-xs) 0 0;
-  text-align: right;
-  color: var(--color-mediumaquamarine);
-}
-.transaction-detail2 {
-  align-self: stretch;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: var(--gap-xl);
-}
-.transaction-types,
-.transactions17 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.transaction-types {
-  align-self: stretch;
-  justify-content: flex-start;
-  gap: var(--gap-2xl);
-}
-.transactions17 {
-  flex: 1;
-  justify-content: flex-end;
-  padding: 0 0 var(--padding-8xs);
-  box-sizing: border-box;
-  min-width: 149px;
-}
-.activity-content,
-.rectangle-parent52 {
-  align-self: stretch;
-  display: flex;
-  justify-content: flex-start;
-  max-width: 100%;
-}
-.rectangle-parent52 {
-  border-radius: var(--br-6xl);
-  background-color: var(--color-white);
-  flex-direction: row;
-  align-items: flex-end;
-  padding: var(--padding-6xl) var(--padding-5xl) var(--padding-6xl)
-    var(--padding-6xl);
-  box-sizing: border-box;
-  gap: var(--gap-mid);
-  z-index: 1;
-  font-size: var(--body-one-regular-16p-size);
-  color: var(--color-gray-100);
-}
-.activity-content {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--gap-xl);
-}
-.expense-statistics {
-  margin: 0;
-  position: relative;
-  font-size: inherit;
-  font-weight: 600;
-  font-family: inherit;
-  z-index: 1;
-}
-.frame-child80 {
-  height: 322px;
-  width: 350px;
-  position: relative;
-  border-radius: var(--br-6xl);
-  background-color: var(--color-white);
-  display: none;
-  max-width: 100%;
-}
-.group-icon1 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  margin: 0 !important;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-  z-index: 1;
-}
-.p {
-  margin: 0;
-}
-.entertainment1 {
-  margin: 0;
-  font-size: var(--body-small-1-size);
-}
-.entertainment {
-  width: 100.2px;
-  position: relative;
-  line-height: 18px;
-  display: inline-block;
-  flex-shrink: 0;
-  z-index: 2;
-}
-.entertainment-label {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-30xl);
-}
-.p1 {
-  margin: 0;
-}
-.bill-expense1 {
-  margin: 0;
-  font-size: var(--body-small-1-size);
-}
-.bill-expense {
-  width: 84.4px;
-  position: relative;
-  line-height: 18px;
-  display: inline-block;
-  z-index: 2;
-}
-.p2 {
-  margin: 0;
-}
-.investment1 {
-  margin: 0;
-  font-size: var(--body-small-1-size);
-}
-.investment {
-  height: 40.5px;
-  position: relative;
-  line-height: 18px;
-  display: inline-block;
-  z-index: 2;
-}
-.p3 {
-  margin: 0;
-}
-.others1 {
-  margin: 0;
-  font-size: var(--body-small-1-size);
-}
-.others {
-  align-self: stretch;
-  height: 40.5px;
-  position: relative;
-  line-height: 18px;
-  display: inline-block;
-  flex-shrink: 0;
-  z-index: 2;
-}
-.others-label {
-  width: 48.4px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-11xl) 0 0;
-  box-sizing: border-box;
-}
-.investment-other-labels,
-.investment-others {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-.investment-other-labels {
-  width: 186.4px;
-  justify-content: space-between;
-  gap: var(--gap-xl);
-}
-.investment-others {
-  align-self: stretch;
-  justify-content: flex-start;
-  padding: 0 var(--padding-12xs);
-}
-.category-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: 33px var(--padding-7xl) 56.2px var(--padding-mini);
-  position: relative;
-  gap: var(--gap-sm);
-}
-.bottom-right-navigation-icons,
-.rectangle-parent53,
-.statistics {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  max-width: 100%;
-}
-.rectangle-parent53 {
-  align-self: stretch;
-  border-radius: var(--br-6xl);
-  background-color: var(--color-white);
-  flex-direction: row;
-  padding: var(--padding-12xl) var(--padding-20xl) 31.3px var(--padding-22xl);
-  box-sizing: border-box;
-  z-index: 1;
-  text-align: center;
-  font-size: var(--body-one-regular-16p-size);
-  color: var(--color-white);
-}
-.bottom-right-navigation-icons,
-.statistics {
-  flex-direction: column;
-}
-.statistics {
-  align-self: stretch;
-  gap: var(--gap-lg);
-  color: #fefefe;
-}
-.bottom-right-navigation-icons {
-  width: 350px;
-  gap: var(--gap-5xl);
-  min-width: 350px;
-  color: var(--color-gainsboro-300);
-}
-.card-list2,
-.cards {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  max-width: 100%;
-}
-.card-list2 {
-  flex: 1;
-  justify-content: flex-start;
-  gap: var(--gap-11xl);
-}
-.cards {
-  align-self: stretch;
-  justify-content: flex-end;
-  padding: 0 var(--padding-21xl) 0 var(--padding-22xl);
-  box-sizing: border-box;
-}
-.frame-child81 {
-  height: 276px;
-  width: 445px;
-  position: relative;
-  border-radius: var(--br-6xl);
-  background-color: var(--color-white);
-  display: none;
-  max-width: 100%;
-}
-.mask-group-icon5 {
-  height: 70px;
-  width: 70px;
-  position: relative;
-  object-fit: cover;
-  z-index: 1;
-}
-.recipient-avatar {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-3xs) 0 var(--padding-8xs);
-}
-.ceo,
-.livia-bator {
-  position: relative;
-  display: inline-block;
-  min-width: 85px;
-  z-index: 1;
-}
-.ceo {
-  min-width: 33px;
-}
-.designation,
-.recipient-name,
-.recipient-title {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.designation {
-  flex-direction: row;
-  padding: 0 var(--padding-9xl) 0 var(--padding-5xl);
-  font-size: var(--button-2-medium-15p-size);
-  color: var(--color-steelblue);
-}
-.recipient-name,
-.recipient-title {
-  flex-direction: column;
-  gap: var(--gap-8xs);
-}
-.recipient-name {
-  gap: var(--gap-mini);
-}
-.write-amount {
-  position: relative;
-  color: var(--color-steelblue);
-  display: inline-block;
-  min-width: 103px;
-  z-index: 1;
-}
-.recipient-input {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-26xl);
-  min-width: 103px;
-}
-.mask-group-icon6 {
-  height: 70px;
-  width: 70px;
-  position: relative;
-  object-fit: cover;
-  z-index: 1;
-}
-.mask-group-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-xs);
-}
-.randy-press {
-  position: relative;
-  display: inline-block;
-  min-width: 94px;
-  z-index: 1;
-}
-.avatar-pair {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-mini);
-}
-.mask-group-icon7 {
-  height: 70px;
-  width: 70px;
-  position: relative;
-  object-fit: cover;
-  z-index: 1;
-}
-.mask-group-container {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 0 0 var(--padding-12xs);
-}
-.workman {
-  position: relative;
-  display: inline-block;
-  min-width: 71px;
-  z-index: 1;
-}
-.avatar-pair1,
-.contact-avatars {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-mini);
-}
-.contact-avatars {
-  flex: 1;
-  flex-direction: row;
-  gap: var(--gap-14xl);
-  min-width: 129px;
-}
-.wrapper-group-56-child {
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  object-fit: contain;
-  position: absolute;
-  left: 4px;
-  top: 4px;
-  transform: scale(1.64);
-}
-.wrapper-group-56 {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.contact-options {
-  height: 63px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 0 var(--padding-smi);
-  box-sizing: border-box;
-}
-.contact-info {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-14xl);
-}
-.designer,
-.director {
-  position: relative;
-  display: inline-block;
-  min-width: 57px;
-  z-index: 1;
-}
-.designer {
-  min-width: 64px;
-}
-.recipient-image {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: var(--gap-xl);
-}
-.contact-roles {
-  width: 213px;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding: 0 var(--padding-lg);
-  box-sizing: border-box;
-  font-size: var(--button-2-medium-15p-size);
-  color: var(--color-steelblue);
-}
-.contact-entry,
-.contact-items,
-.contact-roles {
-  display: flex;
-  align-items: flex-start;
-}
-.contact-entry {
-  flex: 1;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: var(--gap-8xs);
-}
-.contact-items {
-  align-self: stretch;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding: 0 var(--padding-12xs) 0 0;
-}
-.frame-child82 {
-  align-self: stretch;
-  width: 265px;
-  position: relative;
-  border-radius: var(--br-31xl);
-  background-color: var(--color-aliceblue-100);
-  display: none;
-}
-.placeholder {
-  position: relative;
-  display: inline-block;
-  min-width: 53px;
-  z-index: 1;
-}
-.transfer-message {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-base) 0 0;
-}
-.frame-child83 {
-  height: 50px;
-  width: 125px;
-  position: relative;
-  box-shadow: var(--shadow-1);
-  border-radius: var(--br-31xl);
-  background-color: var(--color-blue-200);
-  display: none;
-}
-.send {
-  position: relative;
-  font-size: var(--body-one-regular-16p-size);
-  font-weight: 500;
-  font-family: var(--heading-four-semibold-20p);
-  color: var(--color-white);
-  text-align: left;
-  display: inline-block;
-  min-width: 40px;
-  z-index: 1;
-}
-.send-action {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-11xs) 0 0;
-}
-.group-icon2 {
-  height: 22.6px;
-  width: 26px;
-  position: relative;
-  min-height: 23px;
-  z-index: 1;
-}
-.rectangle-parent55,
-.rectangle-parent56 {
-  border-radius: var(--br-31xl);
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  z-index: 1;
-}
-.rectangle-parent56 {
-  cursor: pointer;
-  border: 0;
-  padding: var(--padding-sm) var(--padding-5xl) 13.4px;
-  background-color: var(--color-blue-200);
-  box-shadow: var(--shadow-1);
-  justify-content: flex-start;
-  gap: var(--gap-2xs);
-}
-.rectangle-parent55 {
-  width: 265px;
-  background-color: var(--color-aliceblue-100);
-  justify-content: space-between;
-  padding: 0 0 0 var(--padding-11xl);
-  box-sizing: border-box;
-  gap: var(--gap-xl);
-  color: var(--color-steelblue);
-}
-.contact-list {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-10xl);
-  min-width: 183px;
-}
-.frame-child84,
-.rectangle-parent54 {
-  border-radius: var(--br-6xl);
-  background-color: var(--color-white);
-  max-width: 100%;
-  z-index: 1;
-}
-.rectangle-parent54 {
-  width: 445px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-16xl) var(--padding-6xl);
-  box-sizing: border-box;
-  gap: var(--gap-3xs);
-  min-width: 445px;
-}
-.frame-child84 {
-  width: 635px;
-  height: 276px;
-  position: relative;
-  display: none;
-}
-.div39,
-.vector-icon1 {
-  position: relative;
-  flex-shrink: 0;
-  z-index: 1;
-}
-.div39 {
-  height: 10.3px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  -webkit-text-stroke: 1px #718ebf;
-  min-width: 28.6px;
-}
-.vector-icon1 {
-  width: 6.3px;
-  height: 1px;
-}
-.vector-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 0 var(--padding-8xs-1);
-}
-.link-icons {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-4xs-1);
-}
-.div40,
-.vector-icon2 {
-  position: relative;
-  flex-shrink: 0;
-  z-index: 1;
-}
-.div40 {
-  height: 10.3px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  -webkit-text-stroke: 1px #718ebf;
-  min-width: 28.6px;
-}
-.vector-icon2 {
-  width: 6.3px;
-  height: 1px;
-}
-.vector-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 0 var(--padding-8xs-1);
-}
-.link-icons1 {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-4xs-1);
-}
-.div41,
-.vector-icon3 {
-  position: relative;
-  flex-shrink: 0;
-  z-index: 1;
-}
-.div41 {
-  height: 10.3px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  -webkit-text-stroke: 1px #718ebf;
-  min-width: 28.6px;
-}
-.vector-icon3 {
-  width: 6.3px;
-  height: 1px;
-}
-.vector-frame {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 0 var(--padding-8xs-1);
-}
-.link-icons2 {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-4xs-1);
-}
-.div42,
-.vector-icon4 {
-  position: relative;
-  z-index: 1;
-}
-.div42 {
-  height: 10px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  -webkit-text-stroke: 1px #718ebf;
-}
-.vector-icon4 {
-  width: 6.3px;
-  height: 1px;
-}
-.link-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 0 4.2px;
-}
-.link-content {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: 7.7px;
-}
-.div43,
-.vector-icon5 {
-  position: relative;
-  z-index: 1;
-}
-.div43 {
-  display: inline-block;
-  -webkit-text-stroke: 1px #718ebf;
-  min-width: 8px;
-}
-.vector-icon5 {
-  width: 6.4px;
-  height: 1px;
-}
-.link-icon1 {
-  flex-direction: column;
-  align-items: flex-start;
-  padding: var(--padding-8xs) 0 0;
-}
-.first-link,
-.link-icon1,
-.link-items,
-.second-link {
-  display: flex;
-  justify-content: flex-start;
-}
-.second-link {
-  flex-direction: row;
-  align-items: flex-start;
-  gap: var(--gap-5xs);
-  font-size: var(--font-size-xs);
-}
-.first-link,
-.link-items {
-  flex-direction: column;
-  gap: var(--gap-17xl);
-}
-.first-link {
-  align-self: stretch;
-  align-items: flex-end;
-}
-.link-items {
-  width: 43px;
-  align-items: flex-start;
-}
-.group-icon3,
-.vector-icon6 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-.vector-icon6 {
-  top: 5px;
-  width: 547px;
-  height: 177px;
-  z-index: 3;
-}
-.group-parent {
-  align-self: stretch;
-  height: 185px;
-  position: relative;
-}
-.group-icon10,
-.group-icon4,
-.group-icon5,
-.group-icon6,
-.group-icon7,
-.group-icon8,
-.group-icon9 {
-  height: 4.3px;
-  width: 1px;
-  position: relative;
-  min-height: 4px;
-  z-index: 1;
-}
-.group-group,
-.link-content1,
-.third-link {
-  display: flex;
-  align-items: flex-start;
-  max-width: 100%;
-}
-.group-group {
-  width: 470px;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: var(--gap-xl);
-}
-.link-content1,
-.third-link {
-  flex-direction: column;
-}
-.link-content1 {
-  align-self: stretch;
-  justify-content: flex-start;
-  gap: var(--gap-12xs);
-}
-.third-link {
-  flex: 1;
-  justify-content: flex-end;
-  padding: 0 0 4.7px;
-  box-sizing: border-box;
-  min-width: 356px;
-}
-.link-items-parent {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  max-width: 100%;
-  row-gap: 20px;
-}
-.aug1,
-.jul {
-  position: relative;
-  display: inline-block;
-  -webkit-text-stroke: 1px #718ebf;
-  min-width: 20px;
-  z-index: 1;
-}
-.aug1 {
-  min-width: 27px;
-}
-.months {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-smi) 0 0;
-}
-.sep1 {
-  position: relative;
-  display: inline-block;
-  -webkit-text-stroke: 1px #718ebf;
-  min-width: 26px;
-  z-index: 1;
-}
-.months1 {
-  width: 29.6px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-10xs) 0 0;
-  box-sizing: border-box;
-}
-.oct1 {
-  position: relative;
-  display: inline-block;
-  -webkit-text-stroke: 1px #718ebf;
-  min-width: 24px;
-  z-index: 1;
-}
-.months2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-7xs) 0 0;
-}
-.nov1 {
-  position: relative;
-  display: inline-block;
-  -webkit-text-stroke: 1px #718ebf;
-  min-width: 27px;
-  z-index: 1;
-}
-.months3 {
-  width: 29.6px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-11xs) 0 0;
-  box-sizing: border-box;
-}
-.dec1 {
-  position: relative;
-  display: inline-block;
-  -webkit-text-stroke: 1px #718ebf;
-  min-width: 27px;
-  z-index: 1;
-}
-.months4 {
-  width: 29.6px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0 var(--padding-11xs) 0 0;
-  box-sizing: border-box;
-}
-.jan1 {
-  position: relative;
-  display: inline-block;
-  -webkit-text-stroke: 1px #718ebf;
-  min-width: 24px;
-  z-index: 1;
-}
-.jul-parent {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  max-width: 100%;
-  gap: var(--gap-xl);
-}
-.chart {
-  width: 578px;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding: 0 42px;
-  box-sizing: border-box;
-  margin-top: -1px;
-  text-align: left;
-  font-size: var(--font-size-sm);
-}
-.chart,
-.frame-parent26,
-.recipient,
-.rectangle-parent57 {
-  display: flex;
-  align-items: flex-start;
-  max-width: 100%;
-}
-.rectangle-parent57 {
-  flex: 1;
-  border-radius: var(--br-6xl);
-  background-color: var(--color-white);
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: var(--padding-11xl) var(--padding-xl) 29.7px;
-  box-sizing: border-box;
-  min-width: 413px;
-  z-index: 1;
-  text-align: right;
-  font-size: var(--body-small-1-size);
-  color: var(--color-steelblue);
-}
-.frame-parent26,
-.recipient {
-  flex-direction: row;
-}
-.frame-parent26 {
-  flex: 1;
-  justify-content: flex-start;
-  gap: var(--gap-11xl);
-}
-.recipient {
-  align-self: stretch;
-  justify-content: flex-end;
-  padding: 0 var(--padding-21xl) 0 var(--padding-22xl);
-  box-sizing: border-box;
-  font-size: var(--body-one-regular-16p-size);
-  color: var(--color-gray-100);
-}
-.content1,
-.main-content1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  max-width: 100%;
-}
-.main-content1 {
-  align-self: stretch;
-  background: linear-gradient(rgba(240, 234, 234, 0), rgba(240, 234, 234, 0)),
-    linear-gradient(rgba(49, 220, 56, 0.2), rgba(49, 220, 56, 0.2)), #0d0d0d;
-  align-items: flex-end;
-  padding: 0 0 var(--padding-11xl);
-  box-sizing: border-box;
-  gap: var(--gap-3xl);
-  text-align: left;
-  font-size: var(--heading-two-semibold-22p-size);
-  color: #fdfdfd;
-  font-family: var(--heading-four-semibold-20p);
-}
-.content1 {
-  position: absolute;
-  top: 0;
-  left: 249px;
-  width: 1210px;
-  align-items: flex-start;
-  gap: var(--gap-6xl);
-}
-.bank-logo-child {
-  height: 100px;
-  width: 249px;
-  position: relative;
-  background-color: var(--color-seagreen-200);
-  display: none;
-}
-.banque-de-lagriculture-et-du-icon4 {
-  height: 64px;
-  width: 63px;
-  position: relative;
-  object-fit: cover;
-  z-index: 4;
-}
-.badr-bank5 {
-  text-decoration: none;
-  align-self: stretch;
-  position: relative;
-  color: inherit;
-  z-index: 4;
-}
-.bank-logo1,
-.bank-name1 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.bank-name1 {
-  flex: 1;
-  flex-direction: column;
-  padding: var(--padding-sm) 0 0;
-}
-.bank-logo1 {
-  align-self: stretch;
-  background-color: var(--color-seagreen-200);
-  flex-direction: row;
-  padding: var(--padding-xl) var(--padding-lg) var(--padding-base)
-    var(--padding-lgi);
-  gap: var(--gap-smi);
-  z-index: 3;
-}
-.footer-child {
-  height: 60px;
-  width: 6px;
-  position: relative;
-  border-radius: 0 var(--br-3xs) var(--br-3xs) 0;
-  background-color: var(--primary-3);
-}
-.credit-card-1-icon7,
-.economic-investment-1-icon4,
-.home-2-icon4,
-.loan-1-icon4,
-.transfer-1-icon4,
-.user-3-14 {
-  width: 25px;
-  height: 25px;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.credit-card-1-icon7,
-.loan-1-icon4 {
-  width: 26px;
-  height: 26px;
-}
-.loan-1-icon4 {
-  height: 25px;
-  width: 25px;
-}
-.menu-items2 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 var(--padding-12xs) 0 var(--padding-11xs);
-}
-.service-1-icon4 {
-  height: 25px;
-  width: 25px;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.menu-items3 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 var(--padding-12xs) 0 var(--padding-11xs);
-}
-.econometrics-1-icon4 {
-  height: 25px;
-  width: 25px;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.menu-items4 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 var(--padding-12xs) 0 var(--padding-11xs);
-}
-.settings-solid-14 {
-  height: 25px;
-  width: 25px;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.menu-items5 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 0 var(--padding-10xs) 0 0;
-}
-.navigation-items1 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-19xl-9);
-}
-.dashboard5 {
-  text-decoration: none;
-  position: relative;
-  font-weight: 500;
-  color: var(--primary-3);
-  display: inline-block;
-  min-width: 94px;
-}
-.transactions18 {
-  margin: 0;
-  font-size: inherit;
-  font-family: inherit;
-  min-width: 112px;
-}
-.accounts6,
-.credit-cards6,
-.investments6,
-.loans4,
-.transactions18 {
-  position: relative;
-  font-weight: 500;
-  display: inline-block;
-}
-.accounts6 {
-  text-decoration: none;
-  color: inherit;
-  min-width: 82px;
-}
-.credit-cards6,
-.investments6,
-.loans4 {
-  margin: 0;
-  font-size: inherit;
-  font-family: inherit;
-  min-width: 106px;
-}
-.credit-cards6,
-.loans4 {
-  min-width: 109px;
-}
-.loans4 {
-  min-width: 52px;
-}
-.services4 {
-  text-decoration: none;
-  color: inherit;
-  min-width: 75px;
-}
-.my-privileges4,
-.services4,
-.setting4 {
-  position: relative;
-  font-weight: 500;
-  display: inline-block;
-}
-.my-privileges4 {
-  margin: 0;
-  font-size: inherit;
-  font-family: inherit;
-  min-width: 116px;
-}
-.setting4 {
-  text-decoration: none;
-  color: inherit;
-  min-width: 62px;
-}
-.page-links,
-.page-navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.page-links {
-  align-self: stretch;
-  justify-content: flex-start;
-  gap: var(--gap-23xl);
-}
-.page-navigation {
-  flex: 1;
-  justify-content: flex-end;
-  padding: 0 0 var(--padding-12xs);
-}
-.footer-navigation {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: var(--gap-7xl);
-}
-.footer-content {
-  flex: 1;
-  flex-direction: column;
-  padding: var(--padding-mid) 0 0;
-}
-.bank-details,
-.footer,
-.footer-content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.footer {
-  width: 231px;
-  flex-direction: row;
-  padding: 0 var(--padding-xl) 0 0;
-  box-sizing: border-box;
-  gap: var(--gap-16xl);
-  font-size: var(--heading-three-medium-18p-size);
-  color: var(--color-darkgray);
-}
-.bank-details {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 249px;
-  flex-direction: column;
-  gap: var(--gap-sm);
-}
-.main-dashboard {
-  width: 100%;
-  height: 1175px;
-  position: relative;
-  background: linear-gradient(rgba(247, 235, 235, 0), rgba(247, 235, 235, 0)),
-    linear-gradient(
-      180deg,
-      rgba(247, 252, 248, 0) 2.5%,
-      rgba(49, 122, 31, 0.19) 19.5%,
-      rgba(41, 117, 22, 0.2) 57.5%,
-      rgba(62, 131, 45, 0.19) 75.5%,
-      rgba(247, 252, 248, 0.1)
-    ),
-    linear-gradient(
-      180deg,
-      #207137 8.5%,
-      #26432e 28%,
-      #2ea44f 54.25%,
-      #296439 74%,
-      #232323 99.5%
-    );
-  overflow: hidden;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  font-size: var(--font-size-6xl);
-  color: var(--color-white);
-  font-family: var(--heading-four-semibold-20p);
-}
-@media screen and (max-width: 975px) {
-  .bottom-right-navigation-icons {
-    flex: 1;
-  }
-  .card-list2 {
-    flex-wrap: wrap;
-  }
-  .rectangle-parent54 {
-    flex: 1;
-  }
-  .frame-parent26 {
-    flex-wrap: wrap;
-  }
-  .main-dashboard {
-    height: auto;
-    min-height: 1175;
-  }
-}
-@media screen and (max-width: 700px) {
-  .card-content1,
-  .graph-bars {
-    flex-wrap: wrap;
-  }
-  .rectangle-parent51 {
-    height: auto;
-    min-height: 322;
-  }
-  .bottom-right-navigation-icons,
-  .card-item,
-  .rectangle-parent54,
-  .third-link {
-    min-width: 100%;
-  }
-  .jul-parent,
-  .link-items-parent {
-    flex-wrap: wrap;
-  }
-  .rectangle-parent57 {
-    min-width: 100%;
-  }
-}
-@media screen and (max-width: 450px) {
-  .my-cards3 {
-    font-size: var(--heading-three-medium-18p-size);
-  }
-  .account-balance-value {
-    font-size: var(--body-one-regular-16p-size);
-  }
-  .balance-row,
-  .card-image1 {
-    flex: 1;
-  }
-  .balance-container1 {
-    flex-wrap: wrap;
-  }
-  .account-activity-placeholder {
-    font-size: var(--heading-three-medium-18p-size);
-  }
-  .rectangle-parent48 {
-    flex-wrap: wrap;
-  }
-  .weekly-activity {
-    font-size: var(--heading-three-medium-18p-size);
-  }
-  .balance-value3 {
-    font-size: var(--body-one-regular-16p-size);
-  }
-  .second-balance-row,
-  .second-card-image {
-    flex: 1;
-  }
-  .second-balance-container {
-    flex-wrap: wrap;
-  }
-  .b8 {
-    font-size: var(--heading-three-medium-18p-size);
-  }
-  .rectangle-parent50 {
-    flex-wrap: wrap;
-  }
-  .fri1 {
-    width: 100%;
-    height: 16px;
-  }
-  .day-labels {
-    flex-wrap: wrap;
-  }
-  .balance-history,
-  .quick-transfer {
-    font-size: var(--heading-three-medium-18p-size);
-  }
-  .transfer-history {
-    flex-wrap: wrap;
-  }
-  .recent-transaction {
-    font-size: var(--heading-three-medium-18p-size);
-  }
-  .rectangle-parent52 {
-    flex-wrap: wrap;
-  }
-  .expense-statistics {
-    font-size: var(--heading-three-medium-18p-size);
-  }
-  .recipient-input {
-    flex: 1;
-  }
-  .contact-info {
-    flex-wrap: wrap;
-  }
-  .contact-entry {
-    flex: 1;
-  }
-  .group-group,
-  .rectangle-parent54 {
-    flex-wrap: wrap;
-  }
-  .group-group {
-    justify-content: center;
-  }
-  .badr-bank5 {
-    font-size: var(--heading-four-semibold-20p-size);
-  }
-}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global_.css" />
+    <link rel="stylesheet" href="./main-dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="main-dashboard">
+      <div class="background"></div>
+      <main class="content1">
+        <div class="navigation1">
+          <header class="logo-container-parent">
+            <div class="logo-container">
+              <a class="overview">Overview</a>
+            </div>
+            <div class="menu-items1">
+              <div class="search1">
+                <button class="rectangle-parent46">
+                  <div class="frame-child70"></div>
+                  <img
+                    class="magnifying-glass-1-icon4"
+                    alt=""
+                    src="./public/magnifyingglass-11.svg"
+                  />
+
+                  <div class="search-placeholder1">
+                    <a class="search-for-something4">Search for something</a>
+                  </div>
+                </button>
+              </div>
+              <div class="menu-icons5">
+                
+                <img
+                  class="menu-icons-child"
+                  loading="lazy"
+                  alt=""
+                  src="./public/group-41.svg"
+                />
+              </div>
+              <div class="menu-icons6">
+                <img 
+                  class="menu-icons-item"
+                  loading="lazy"
+                  alt=""
+                  src="./public/group-31.svg"
+                />
+              </div>
+              <a href="file:///C:/Users/dell/Desktop/bank-sys-test-main/templates/setting-page-1.html"> 
+               <img
+                class="mask-group-icon4"
+                loading="lazy"
+                alt=""
+                src="./public/mask-group1@2x.png"
+               />
+             </a>
+            </div>
+          </header>
+        </div>
+        <section class="main-content1">
+          <div class="bg"></div>
+          <div class="content-top-divider"></div>
+          <div class="cards">
+            <div class="card-list2">
+              <div class="card-item">
+                <div class="card-content1">
+                  <div class="card-header1">
+                    <a class="my-cards3">My Cards</a>
+                    <div class="rectangle-parent47">
+                      <div class="frame-child71"></div>
+                      <div class="balance-info2">
+                        <div class="balance-container1">
+                          <div class="balance-row">
+                            <div class="balance-value2">
+                              <div class="balance7">Balance</div>
+                              <b class="account-balance-value">$5,756</b>
+                            </div>
+                            <div class="holder-info">
+                              <div class="card-holder7">CARD HOLDER</div>
+                              <b class="eddy-cusuma6">Eddy Cusuma</b>
+                            </div>
+                          </div>
+                          <div class="card-image1">
+                            <img
+                              class="chip-card-icon6"
+                              loading="lazy"
+                              alt=""
+                              src="./public/chip-card@2x.png"
+                            />
+
+                            <div class="validity1">
+                              <div class="validity-row">
+                                <div class="valid-thru6">VALID THRU</div>
+                                <b class="account-validity-value">12/22</b>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="rectangle-parent48">
+                        <div class="frame-child72"></div>
+                        <div class="see-all-button">
+                          <b class="account-activity-placeholder"
+                            >3778 **
+** 1234</b
+                          >
+                        </div>
+                        <img
+                          class="frame-child73"
+                          alt=""
+                          src="./public/group-17.svg"
+                        />
+                      </div>
+                    </div>
+                    <h2 class="weekly-activity">Weekly Activity</h2>
+                  </div>
+                  <div class="second-card">
+                    <div class="second-card-content">
+                      <div class="second-card-header">
+                        <a class="see-all1">
+                          <span>See</span>
+                          <span class="span"> </span>
+                          <span>All</span>
+                        </a>
+                      </div>
+                      <div class="rectangle-parent49">
+                        <div class="frame-child74"></div>
+                        <div class="second-balance-info">
+                          <div class="second-balance-container">
+                            <div class="second-balance-row">
+                              <div class="second-balance-value">
+                                <div class="balance8">Balance</div>
+                                <b class="balance-value3">$5,756</b>
+                              </div>
+                              <div class="second-holder-info">
+                                <div class="card-holder8">CARD HOLDER</div>
+                                <b class="eddy-cusuma7">Eddy Cusuma</b>
+                              </div>
+                            </div>
+                            <div class="second-card-image">
+                              <img
+                                class="chip-card-icon7"
+                                loading="lazy"
+                                alt=""
+                                src="./public/chip-card-1@2x.png"
+                              />
+
+                              <div class="second-validity">
+                                <div class="second-validity-row">
+                                  <div class="valid-thru7">VALID THRU</div>
+                                  <b class="valid-thru-value">12/22</b>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="rectangle-parent50">
+                          <div class="frame-child75"></div>
+                          <div class="second-see-all-button">
+                            <b class="b8">3778 **
+** 1234</b>
+                          </div>
+                          <img
+                            class="frame-child76"
+                            alt=""
+                            src="./public/group-17-2.svg"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transactions16">
+                  <div class="rectangle-parent51">
+                    <div class="frame-child77"></div>
+                    <div class="chart-bars2"></div>
+                    <div class="chart-bars3"></div>
+                    <div class="chart-bars4"></div>
+                    <div class="chart-bars5"></div>
+                    <div class="type-icons">
+                      <div class="chart-legend-items">500</div>
+                      <div class="icon-placeholder">
+                        <div class="chart-legend-item">400</div>
+                      </div>
+                      <div class="icon-placeholder1">
+                        <div class="div35">300</div>
+                      </div>
+                      <div class="chart-legend-items1">200</div>
+                      <div class="chart-legend-items2">100</div>
+                      <div class="icon-placeholder2">
+                        <div class="div36">0</div>
+                      </div>
+                    </div>
+                    <div class="transaction-details6">
+                      <div class="transaction-summary">
+                        <div class="transaction-amounts">
+                          <div class="amount-circles">
+                            <div class="graph-dots"></div>
+                          </div>
+                          <div class="diposit">Diposit</div>
+                        </div>
+                        <div class="transaction-amounts1">
+                          <div class="transaction-amounts-inner">
+                            <div class="frame-child78"></div>
+                          </div>
+                          <div class="withdraw">Withdraw</div>
+                        </div>
+                      </div>
+                      <div class="transaction-graph">
+                        <div class="graph-container">
+                          <div class="graph-container-child"></div>
+                          <div class="graph-content">
+                            <div class="graph-bars">
+                              <div class="bar-containers">
+                                <div class="bar-containers-child"></div>
+                                <div class="bar-containers-item"></div>
+                              </div>
+                              <div class="bar-containers1">
+                                <div class="bar-containers-inner"></div>
+                                <div class="bar-containers-child1"></div>
+                              </div>
+                              <div class="bar-containers2">
+                                <div class="bar-containers-child2"></div>
+                                <div class="bar-containers-child3"></div>
+                              </div>
+                              <div class="bar-containers3">
+                                <div class="bar-containers-child4"></div>
+                                <div class="bar-containers-child5"></div>
+                              </div>
+                              <div class="bar-containers4">
+                                <div class="bar-containers-child6"></div>
+                                <div class="bar-containers-child7"></div>
+                              </div>
+                              <div class="bar-containers5">
+                                <div class="bar-containers-child8"></div>
+                                <div class="bar-containers-child9"></div>
+                              </div>
+                              <div class="bar-containers6">
+                                <div class="bar-containers-child10"></div>
+                                <div class="bar-containers-child11"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="balance-separator"></div>
+                      </div>
+                      <div class="graph-days">
+                        <div class="day-labels">
+                          <div class="day-values">
+                            <div class="sat1">Sat</div>
+                          </div>
+                          <div class="sun1">Sun</div>
+                          <div class="mon1">Mon</div>
+                          <div class="tue1">Tue</div>
+                          <div class="wed1">Wed</div>
+                          <div class="day-values1">
+                            <div class="thu1">Thu</div>
+                          </div>
+                          <div class="fri1">Fri</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="transfer-history">
+                  <h2 class="quick-transfer">Quick Transfer</h2>
+                  <h2 class="balance-history">Balance History</h2>
+                </div>
+              </div>
+              <div class="bottom-right-navigation-icons">
+                <div class="activity-content">
+                  <a class="recent-transaction">Recent Transaction</a>
+                  <div class="rectangle-parent52">
+                    <div class="frame-child79"></div>
+                    <div class="activity-items">
+                      <img
+                        class="activity-items-child"
+                        loading="lazy"
+                        alt=""
+                        src="./public/group-313.svg"
+                      />
+
+                      <img
+                        class="activity-items-item"
+                        loading="lazy"
+                        alt=""
+                        src="./public/group-314.svg"
+                      />
+
+                      <img
+                        class="activity-items-inner"
+                        loading="lazy"
+                        alt=""
+                        src="./public/group-315.svg"
+                      />
+                    </div>
+                    <div class="transactions17">
+                      <div class="transaction-types">
+                        <div class="transaction-detail">
+                          <div class="transaction-info1">
+                            <div class="deposit-from-my">
+                              Deposit from my Card
+                            </div>
+                            <div class="transaction-months">
+                              <div class="transaction-navigation-icon">
+                                -$850
+                              </div>
+                            </div>
+                          </div>
+                          <div class="january-2021">28 January 2021</div>
+                        </div>
+                        <div class="transaction-detail1">
+                          <div class="deposit-paypal-parent">
+                            <div class="deposit-paypal">Deposit Paypal</div>
+                            <div class="january-20211">25 January 2021</div>
+                          </div>
+                          <div class="wrapper11">
+                            <div class="div37">+$2,500</div>
+                          </div>
+                        </div>
+                        <div class="transaction-detail2">
+                          <div class="jemi-wilson-parent">
+                            <div class="jemi-wilson">Jemi Wilson</div>
+                            <div class="january-20212">21 January 2021</div>
+                          </div>
+                          <div class="wrapper12">
+                            <div class="div38">+$5,400</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="statistics">
+                  <h2 class="expense-statistics">Expense Statistics</h2>
+                  <div class="rectangle-parent53">
+                    <div class="frame-child80"></div>
+                    <div class="category-container">
+                      <img
+                        class="group-icon1"
+                        loading="lazy"
+                        alt=""
+                        src="./public/group.svg"
+                      />
+
+                      <div class="entertainment-label">
+                        <b class="entertainment">
+                          <p class="p">30%</p>
+                          <p class="entertainment1">Entertainment</p>
+                        </b>
+                      </div>
+                      <b class="bill-expense">
+                        <p class="p1">15%</p>
+                        <p class="bill-expense1">Bill Expense</p>
+                      </b>
+                      <div class="investment-others">
+                        <div class="investment-other-labels">
+                          <b class="investment">
+                            <p class="p2">20%</p>
+                            <p class="investment1">Investment</p>
+                          </b>
+                          <div class="others-label">
+                            <b class="others">
+                              <p class="p3">35%</p>
+                              <p class="others1">Others</p>
+                            </b>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="recipient">
+            <div class="frame-parent26">
+              <div class="rectangle-parent54">
+                <div class="frame-child81"></div>
+                <div class="recipient-input">
+                  <div class="recipient-name">
+                    <div class="recipient-avatar">
+                      <img
+                        class="mask-group-icon5"
+                        loading="lazy"
+                        alt=""
+                        src="./public/mask-group-1@2x.png"
+                      />
+                    </div>
+                    <div class="recipient-title">
+                      <div class="livia-bator">Livia Bator</div>
+                      <div class="designation">
+                        <div class="ceo">CEO</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="write-amount">Write Amount</div>
+                </div>
+                <div class="contact-list">
+                  <div class="contact-items">
+                    <div class="contact-entry">
+                      <div class="contact-info">
+                        <div class="contact-avatars">
+                          <div class="avatar-pair">
+                            <div class="mask-group-wrapper">
+                              <img
+                                class="mask-group-icon6"
+                                loading="lazy"
+                                alt=""
+                                src="./public/mask-group-2@2x.png"
+                              />
+                            </div>
+                            <div class="randy-press">Randy Press</div>
+                          </div>
+                          <div class="avatar-pair1">
+                            <div class="mask-group-container">
+                              <img
+                                class="mask-group-icon7"
+                                loading="lazy"
+                                alt=""
+                                src="./public/mask-group-3@2x.png"
+                              />
+                            </div>
+                            <div class="workman">Workman</div>
+                          </div>
+                        </div>
+                        <div class="contact-options">
+                          <div class="wrapper-group-56">
+                            <img
+                              class="wrapper-group-56-child"
+                              loading="lazy"
+                              alt=""
+                              src="./public/group-56.svg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="contact-roles">
+                        <div class="recipient-image">
+                          <div class="director">Director</div>
+                          <div class="designer">Designer</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rectangle-parent55">
+                    <div class="frame-child82"></div>
+                    <div class="transfer-message">
+                      <div class="placeholder">525.50</div>
+                    </div>
+                    <button class="rectangle-parent56">
+                      <div class="frame-child83"></div>
+                      <div class="send-action">
+                        <div class="send">Send</div>
+                      </div>
+                      <img
+                        class="group-icon2"
+                        alt=""
+                        src="./public/group-1.svg"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="rectangle-parent57">
+                <div class="frame-child84"></div>
+                <div class="link-items-parent">
+                  <div class="link-items">
+                    <div class="link-icons">
+                      <div class="div39">800</div>
+                      <div class="vector-wrapper">
+                        <img
+                          class="vector-icon1"
+                          loading="lazy"
+                          alt=""
+                          src="./public/vector1.svg"
+                        />
+                      </div>
+                    </div>
+                    <div class="link-icons1">
+                      <div class="div40">600</div>
+                      <div class="vector-container">
+                        <img
+                          class="vector-icon2"
+                          loading="lazy"
+                          alt=""
+                          src="./public/vector1.svg"
+                        />
+                      </div>
+                    </div>
+                    <div class="link-icons2">
+                      <div class="div41">400</div>
+                      <div class="vector-frame">
+                        <img
+                          class="vector-icon3"
+                          loading="lazy"
+                          alt=""
+                          src="./public/vector1.svg"
+                        />
+                      </div>
+                    </div>
+                    <div class="first-link">
+                      <div class="link-content">
+                        <div class="div42">200</div>
+                        <div class="link-icon">
+                          <img
+                            class="vector-icon4"
+                            alt=""
+                            src="./public/vector-3.svg"
+                          />
+                        </div>
+                      </div>
+                      <div class="second-link">
+                        <div class="div43">0</div>
+                        <div class="link-icon1">
+                          <img
+                            class="vector-icon5"
+                            loading="lazy"
+                            alt=""
+                            src="./public/vector-4.svg"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="third-link">
+                    <div class="link-content1">
+                      <div class="group-parent">
+                        <img
+                          class="group-icon3"
+                          alt=""
+                          src="./public/group-2.svg"
+                        />
+
+                        <img
+                          class="vector-icon6"
+                          loading="lazy"
+                          alt=""
+                          src="./public/vector-5.svg"
+                        />
+                      </div>
+                      <div class="group-group">
+                        <img
+                          class="group-icon4"
+                          alt=""
+                          src="./public/group-32.svg"
+                        />
+
+                        <img
+                          class="group-icon5"
+                          alt=""
+                          src="./public/group-32.svg"
+                        />
+
+                        <img
+                          class="group-icon6"
+                          alt=""
+                          src="./public/group-32.svg"
+                        />
+
+                        <img
+                          class="group-icon7"
+                          alt=""
+                          src="./public/group-32.svg"
+                        />
+
+                        <img
+                          class="group-icon8"
+                          alt=""
+                          src="./public/group-32.svg"
+                        />
+
+                        <img
+                          class="group-icon9"
+                          alt=""
+                          src="./public/group-32.svg"
+                        />
+
+                        <img
+                          class="group-icon10"
+                          alt=""
+                          src="./public/group-32.svg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chart">
+                  <div class="jul-parent">
+                    <div class="jul">Jul</div>
+                    <div class="months">
+                      <div class="aug1">Aug</div>
+                    </div>
+                    <div class="months1">
+                      <div class="sep1">Sep</div>
+                    </div>
+                    <div class="months2">
+                      <div class="oct1">Oct</div>
+                    </div>
+                    <div class="months3">
+                      <div class="nov1">Nov</div>
+                    </div>
+                    <div class="months4">
+                      <div class="dec1">Dec</div>
+                    </div>
+                    <div class="jan1">Jan</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <div class="bank-details">
+        <div class="bank-logo1">
+          <div class="bank-logo-child"></div>
+          <img
+            class="banque-de-lagriculture-et-du-icon4"
+            loading="lazy"
+            alt=""
+            src="./public/banque-de-lagriculture-et-du-dveloppement-ruralsvg-1@2x.png"
+          />
+          <div class="bank-name1">
+            <a class="badr-bank5" href="file:///C:/Users/dell/Desktop/bank-sys-test-main/templates/main-dashboard.html">
+              Badr Bank
+            </a>
+          </div>
+          
+        </div>
+        <div class="footer">
+          <div class="footer-child"></div>
+          <div class="footer-content">
+            <div class="footer-navigation">
+              <div class="navigation-items1">
+                <img
+                  class="home-2-icon4"
+                  loading="lazy"
+                  alt=""
+                  src="./public/home-21.svg"
+                />
+
+                <img
+                  class="transfer-1-icon4"
+                  loading="lazy"
+                  alt=""
+                  src="./public/transfer-1.svg"
+                />
+
+                <img class="user-3-14" alt="" src="./public/user-3-11.svg" />
+
+                <img
+                  class="economic-investment-1-icon4"
+                  loading="lazy"
+                  alt=""
+                  src="./public/economicinvestment-1.svg"
+                />
+
+                <img
+                  class="credit-card-1-icon7"
+                  loading="lazy"
+                  alt=""
+                  src="./public/creditcard-12.svg"
+                />
+
+                <div class="menu-items2">
+                  <img
+                    class="loan-1-icon4"
+                    loading="lazy"
+                    alt=""
+                    src="./public/loan-1.svg"
+                  />
+                </div>
+                <div class="menu-items3">
+                  <img
+                    class="service-1-icon4"
+                    loading="lazy"
+                    alt=""
+                    src="./public/service-1.svg"
+                  />
+                </div>
+                <div class="menu-items4">
+                  <img
+                    class="econometrics-1-icon4"
+                    loading="lazy"
+                    alt=""
+                    src="./public/econometrics-1.svg"
+                  />
+                </div>
+                <div class="menu-items5">
+                  <img
+                    class="settings-solid-14"
+                    loading="lazy"
+                    alt=""
+                    src="./public/settings-solid-1.svg"
+                  />
+                </div>
+              </div>
+              <div class="page-navigation">
+                <div class="page-links">
+                  <a class="dashboard5">Dashboard</a>
+                  <h3 class="transactions18">Transactions</h3>
+                  <a class="accounts6">Accounts</a>
+                  <h3 class="investments6">Investments</h3>
+                  <h3 class="credit-cards6">Credit Cards</h3>
+                  <h3 class="loans4">Loans</h3>
+                  <a class="services4">Services</a>
+                  <h3 class="my-privileges4">My Privileges</h3>
+                  <a class="setting4">Setting</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
