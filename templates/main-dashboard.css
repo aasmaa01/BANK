@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <link rel="stylesheet" href="./global_.css" />
-    <link rel="stylesheet" href="./main-dashboard.css" />
+    <link rel="stylesheet" href="./setting-page-1.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
@@ -16,712 +15,384 @@
     />
   </head>
   <body>
-    <div class="main-dashboard">
-      <div class="background"></div>
-      <main class="content1">
-        <div class="navigation1">
-          <header class="logo-container-parent">
-            <div class="logo-container">
-              <a class="overview">Overview</a>
-            </div>
-            <div class="menu-items1">
-              <div class="search1">
-                <button class="rectangle-parent46">
-                  <div class="frame-child70"></div>
-                  <img
-                    class="magnifying-glass-1-icon4"
-                    alt=""
-                    src="./public/magnifyingglass-11.svg"
-                  />
-
-                  <div class="search-placeholder1">
-                    <a class="search-for-something4">Search for something</a>
-                  </div>
-                </button>
-              </div>
-              <div class="menu-icons5">
-                
-                <img
-                  class="menu-icons-child"
-                  loading="lazy"
-                  alt=""
-                  src="./public/group-41.svg"
-                />
-              </div>
-              <div class="menu-icons6">
-                <img 
-                  class="menu-icons-item"
-                  loading="lazy"
-                  alt=""
-                  src="./public/group-31.svg"
-                />
-              </div>
-              <a href="file:///C:/Users/dell/Desktop/bank-sys-test-main/templates/setting-page-1.html"> 
-               <img
-                class="mask-group-icon4"
-                loading="lazy"
-                alt=""
-                src="./public/mask-group1@2x.png"
-               />
-             </a>
-            </div>
-          </header>
-        </div>
-        <section class="main-content1">
-          <div class="bg"></div>
-          <div class="content-top-divider"></div>
-          <div class="cards">
-            <div class="card-list2">
-              <div class="card-item">
-                <div class="card-content1">
-                  <div class="card-header1">
-                    <a class="my-cards3">My Cards</a>
-                    <div class="rectangle-parent47">
-                      <div class="frame-child71"></div>
-                      <div class="balance-info2">
-                        <div class="balance-container1">
-                          <div class="balance-row">
-                            <div class="balance-value2">
-                              <div class="balance7">Balance</div>
-                              <b class="account-balance-value">$5,756</b>
-                            </div>
-                            <div class="holder-info">
-                              <div class="card-holder7">CARD HOLDER</div>
-                              <b class="eddy-cusuma6">Eddy Cusuma</b>
-                            </div>
-                          </div>
-                          <div class="card-image1">
-                            <img
-                              class="chip-card-icon6"
-                              loading="lazy"
-                              alt=""
-                              src="./public/chip-card@2x.png"
-                            />
-
-                            <div class="validity1">
-                              <div class="validity-row">
-                                <div class="valid-thru6">VALID THRU</div>
-                                <b class="account-validity-value">12/22</b>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="rectangle-parent48">
-                        <div class="frame-child72"></div>
-                        <div class="see-all-button">
-                          <b class="account-activity-placeholder"
-                            >3778 **
-** 1234</b
-                          >
-                        </div>
-                        <img
-                          class="frame-child73"
-                          alt=""
-                          src="./public/group-17.svg"
-                        />
-                      </div>
-                    </div>
-                    <h2 class="weekly-activity">Weekly Activity</h2>
-                  </div>
-                  <div class="second-card">
-                    <div class="second-card-content">
-                      <div class="second-card-header">
-                        <a class="see-all1">
-                          <span>See</span>
-                          <span class="span"> </span>
-                          <span>All</span>
-                        </a>
-                      </div>
-                      <div class="rectangle-parent49">
-                        <div class="frame-child74"></div>
-                        <div class="second-balance-info">
-                          <div class="second-balance-container">
-                            <div class="second-balance-row">
-                              <div class="second-balance-value">
-                                <div class="balance8">Balance</div>
-                                <b class="balance-value3">$5,756</b>
-                              </div>
-                              <div class="second-holder-info">
-                                <div class="card-holder8">CARD HOLDER</div>
-                                <b class="eddy-cusuma7">Eddy Cusuma</b>
-                              </div>
-                            </div>
-                            <div class="second-card-image">
-                              <img
-                                class="chip-card-icon7"
-                                loading="lazy"
-                                alt=""
-                                src="./public/chip-card-1@2x.png"
-                              />
-
-                              <div class="second-validity">
-                                <div class="second-validity-row">
-                                  <div class="valid-thru7">VALID THRU</div>
-                                  <b class="valid-thru-value">12/22</b>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="rectangle-parent50">
-                          <div class="frame-child75"></div>
-                          <div class="second-see-all-button">
-                            <b class="b8">3778 **
-** 1234</b>
-                          </div>
-                          <img
-                            class="frame-child76"
-                            alt=""
-                            src="./public/group-17-2.svg"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="transactions16">
-                  <div class="rectangle-parent51">
-                    <div class="frame-child77"></div>
-                    <div class="chart-bars2"></div>
-                    <div class="chart-bars3"></div>
-                    <div class="chart-bars4"></div>
-                    <div class="chart-bars5"></div>
-                    <div class="type-icons">
-                      <div class="chart-legend-items">500</div>
-                      <div class="icon-placeholder">
-                        <div class="chart-legend-item">400</div>
-                      </div>
-                      <div class="icon-placeholder1">
-                        <div class="div35">300</div>
-                      </div>
-                      <div class="chart-legend-items1">200</div>
-                      <div class="chart-legend-items2">100</div>
-                      <div class="icon-placeholder2">
-                        <div class="div36">0</div>
-                      </div>
-                    </div>
-                    <div class="transaction-details6">
-                      <div class="transaction-summary">
-                        <div class="transaction-amounts">
-                          <div class="amount-circles">
-                            <div class="graph-dots"></div>
-                          </div>
-                          <div class="diposit">Diposit</div>
-                        </div>
-                        <div class="transaction-amounts1">
-                          <div class="transaction-amounts-inner">
-                            <div class="frame-child78"></div>
-                          </div>
-                          <div class="withdraw">Withdraw</div>
-                        </div>
-                      </div>
-                      <div class="transaction-graph">
-                        <div class="graph-container">
-                          <div class="graph-container-child"></div>
-                          <div class="graph-content">
-                            <div class="graph-bars">
-                              <div class="bar-containers">
-                                <div class="bar-containers-child"></div>
-                                <div class="bar-containers-item"></div>
-                              </div>
-                              <div class="bar-containers1">
-                                <div class="bar-containers-inner"></div>
-                                <div class="bar-containers-child1"></div>
-                              </div>
-                              <div class="bar-containers2">
-                                <div class="bar-containers-child2"></div>
-                                <div class="bar-containers-child3"></div>
-                              </div>
-                              <div class="bar-containers3">
-                                <div class="bar-containers-child4"></div>
-                                <div class="bar-containers-child5"></div>
-                              </div>
-                              <div class="bar-containers4">
-                                <div class="bar-containers-child6"></div>
-                                <div class="bar-containers-child7"></div>
-                              </div>
-                              <div class="bar-containers5">
-                                <div class="bar-containers-child8"></div>
-                                <div class="bar-containers-child9"></div>
-                              </div>
-                              <div class="bar-containers6">
-                                <div class="bar-containers-child10"></div>
-                                <div class="bar-containers-child11"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="balance-separator"></div>
-                      </div>
-                      <div class="graph-days">
-                        <div class="day-labels">
-                          <div class="day-values">
-                            <div class="sat1">Sat</div>
-                          </div>
-                          <div class="sun1">Sun</div>
-                          <div class="mon1">Mon</div>
-                          <div class="tue1">Tue</div>
-                          <div class="wed1">Wed</div>
-                          <div class="day-values1">
-                            <div class="thu1">Thu</div>
-                          </div>
-                          <div class="fri1">Fri</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="transfer-history">
-                  <h2 class="quick-transfer">Quick Transfer</h2>
-                  <h2 class="balance-history">Balance History</h2>
-                </div>
-              </div>
-              <div class="bottom-right-navigation-icons">
-                <div class="activity-content">
-                  <a class="recent-transaction">Recent Transaction</a>
-                  <div class="rectangle-parent52">
-                    <div class="frame-child79"></div>
-                    <div class="activity-items">
-                      <img
-                        class="activity-items-child"
-                        loading="lazy"
-                        alt=""
-                        src="./public/group-313.svg"
-                      />
-
-                      <img
-                        class="activity-items-item"
-                        loading="lazy"
-                        alt=""
-                        src="./public/group-314.svg"
-                      />
-
-                      <img
-                        class="activity-items-inner"
-                        loading="lazy"
-                        alt=""
-                        src="./public/group-315.svg"
-                      />
-                    </div>
-                    <div class="transactions17">
-                      <div class="transaction-types">
-                        <div class="transaction-detail">
-                          <div class="transaction-info1">
-                            <div class="deposit-from-my">
-                              Deposit from my Card
-                            </div>
-                            <div class="transaction-months">
-                              <div class="transaction-navigation-icon">
-                                -$850
-                              </div>
-                            </div>
-                          </div>
-                          <div class="january-2021">28 January 2021</div>
-                        </div>
-                        <div class="transaction-detail1">
-                          <div class="deposit-paypal-parent">
-                            <div class="deposit-paypal">Deposit Paypal</div>
-                            <div class="january-20211">25 January 2021</div>
-                          </div>
-                          <div class="wrapper11">
-                            <div class="div37">+$2,500</div>
-                          </div>
-                        </div>
-                        <div class="transaction-detail2">
-                          <div class="jemi-wilson-parent">
-                            <div class="jemi-wilson">Jemi Wilson</div>
-                            <div class="january-20212">21 January 2021</div>
-                          </div>
-                          <div class="wrapper12">
-                            <div class="div38">+$5,400</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="statistics">
-                  <h2 class="expense-statistics">Expense Statistics</h2>
-                  <div class="rectangle-parent53">
-                    <div class="frame-child80"></div>
-                    <div class="category-container">
-                      <img
-                        class="group-icon1"
-                        loading="lazy"
-                        alt=""
-                        src="./public/group.svg"
-                      />
-
-                      <div class="entertainment-label">
-                        <b class="entertainment">
-                          <p class="p">30%</p>
-                          <p class="entertainment1">Entertainment</p>
-                        </b>
-                      </div>
-                      <b class="bill-expense">
-                        <p class="p1">15%</p>
-                        <p class="bill-expense1">Bill Expense</p>
-                      </b>
-                      <div class="investment-others">
-                        <div class="investment-other-labels">
-                          <b class="investment">
-                            <p class="p2">20%</p>
-                            <p class="investment1">Investment</p>
-                          </b>
-                          <div class="others-label">
-                            <b class="others">
-                              <p class="p3">35%</p>
-                              <p class="others1">Others</p>
-                            </b>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="recipient">
-            <div class="frame-parent26">
-              <div class="rectangle-parent54">
-                <div class="frame-child81"></div>
-                <div class="recipient-input">
-                  <div class="recipient-name">
-                    <div class="recipient-avatar">
-                      <img
-                        class="mask-group-icon5"
-                        loading="lazy"
-                        alt=""
-                        src="./public/mask-group-1@2x.png"
-                      />
-                    </div>
-                    <div class="recipient-title">
-                      <div class="livia-bator">Livia Bator</div>
-                      <div class="designation">
-                        <div class="ceo">CEO</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="write-amount">Write Amount</div>
-                </div>
-                <div class="contact-list">
-                  <div class="contact-items">
-                    <div class="contact-entry">
-                      <div class="contact-info">
-                        <div class="contact-avatars">
-                          <div class="avatar-pair">
-                            <div class="mask-group-wrapper">
-                              <img
-                                class="mask-group-icon6"
-                                loading="lazy"
-                                alt=""
-                                src="./public/mask-group-2@2x.png"
-                              />
-                            </div>
-                            <div class="randy-press">Randy Press</div>
-                          </div>
-                          <div class="avatar-pair1">
-                            <div class="mask-group-container">
-                              <img
-                                class="mask-group-icon7"
-                                loading="lazy"
-                                alt=""
-                                src="./public/mask-group-3@2x.png"
-                              />
-                            </div>
-                            <div class="workman">Workman</div>
-                          </div>
-                        </div>
-                        <div class="contact-options">
-                          <div class="wrapper-group-56">
-                            <img
-                              class="wrapper-group-56-child"
-                              loading="lazy"
-                              alt=""
-                              src="./public/group-56.svg"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="contact-roles">
-                        <div class="recipient-image">
-                          <div class="director">Director</div>
-                          <div class="designer">Designer</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="rectangle-parent55">
-                    <div class="frame-child82"></div>
-                    <div class="transfer-message">
-                      <div class="placeholder">525.50</div>
-                    </div>
-                    <button class="rectangle-parent56">
-                      <div class="frame-child83"></div>
-                      <div class="send-action">
-                        <div class="send">Send</div>
-                      </div>
-                      <img
-                        class="group-icon2"
-                        alt=""
-                        src="./public/group-1.svg"
-                      />
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="rectangle-parent57">
-                <div class="frame-child84"></div>
-                <div class="link-items-parent">
-                  <div class="link-items">
-                    <div class="link-icons">
-                      <div class="div39">800</div>
-                      <div class="vector-wrapper">
-                        <img
-                          class="vector-icon1"
-                          loading="lazy"
-                          alt=""
-                          src="./public/vector1.svg"
-                        />
-                      </div>
-                    </div>
-                    <div class="link-icons1">
-                      <div class="div40">600</div>
-                      <div class="vector-container">
-                        <img
-                          class="vector-icon2"
-                          loading="lazy"
-                          alt=""
-                          src="./public/vector1.svg"
-                        />
-                      </div>
-                    </div>
-                    <div class="link-icons2">
-                      <div class="div41">400</div>
-                      <div class="vector-frame">
-                        <img
-                          class="vector-icon3"
-                          loading="lazy"
-                          alt=""
-                          src="./public/vector1.svg"
-                        />
-                      </div>
-                    </div>
-                    <div class="first-link">
-                      <div class="link-content">
-                        <div class="div42">200</div>
-                        <div class="link-icon">
-                          <img
-                            class="vector-icon4"
-                            alt=""
-                            src="./public/vector-3.svg"
-                          />
-                        </div>
-                      </div>
-                      <div class="second-link">
-                        <div class="div43">0</div>
-                        <div class="link-icon1">
-                          <img
-                            class="vector-icon5"
-                            loading="lazy"
-                            alt=""
-                            src="./public/vector-4.svg"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="third-link">
-                    <div class="link-content1">
-                      <div class="group-parent">
-                        <img
-                          class="group-icon3"
-                          alt=""
-                          src="./public/group-2.svg"
-                        />
-
-                        <img
-                          class="vector-icon6"
-                          loading="lazy"
-                          alt=""
-                          src="./public/vector-5.svg"
-                        />
-                      </div>
-                      <div class="group-group">
-                        <img
-                          class="group-icon4"
-                          alt=""
-                          src="./public/group-32.svg"
-                        />
-
-                        <img
-                          class="group-icon5"
-                          alt=""
-                          src="./public/group-32.svg"
-                        />
-
-                        <img
-                          class="group-icon6"
-                          alt=""
-                          src="./public/group-32.svg"
-                        />
-
-                        <img
-                          class="group-icon7"
-                          alt=""
-                          src="./public/group-32.svg"
-                        />
-
-                        <img
-                          class="group-icon8"
-                          alt=""
-                          src="./public/group-32.svg"
-                        />
-
-                        <img
-                          class="group-icon9"
-                          alt=""
-                          src="./public/group-32.svg"
-                        />
-
-                        <img
-                          class="group-icon10"
-                          alt=""
-                          src="./public/group-32.svg"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="chart">
-                  <div class="jul-parent">
-                    <div class="jul">Jul</div>
-                    <div class="months">
-                      <div class="aug1">Aug</div>
-                    </div>
-                    <div class="months1">
-                      <div class="sep1">Sep</div>
-                    </div>
-                    <div class="months2">
-                      <div class="oct1">Oct</div>
-                    </div>
-                    <div class="months3">
-                      <div class="nov1">Nov</div>
-                    </div>
-                    <div class="months4">
-                      <div class="dec1">Dec</div>
-                    </div>
-                    <div class="jan1">Jan</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <div class="bank-details">
-        <div class="bank-logo1">
-          <div class="bank-logo-child"></div>
-          <img
-            class="banque-de-lagriculture-et-du-icon4"
-            loading="lazy"
-            alt=""
-            src="./public/banque-de-lagriculture-et-du-dveloppement-ruralsvg-1@2x.png"
-          />
-          <div class="bank-name1">
-            <a class="badr-bank5" href="file:///C:/Users/dell/Desktop/bank-sys-test-main/templates/main-dashboard.html">
+    <div class="setting-page-1">
+      <div class="content3"></div>
+      <header class="header6">
+        <div class="header-child6"></div>
+        <div class="header-child7"></div>
+        <div class="header-inner3">
+          <div class="banque-de-lagriculture-et-du-parent">
+            <img
+              class="banque-de-lagriculture-et-du-icon7"
+              loading="lazy"
+              alt=""
+              src="./public/banque-de-lagriculture-et-du-dveloppement-ruralsvg-11@2x.png"
+            />
+            <a
+              class="badr-bank5"
+              href="file:///C:/Users/dell/Desktop/bank-sys-test-main/templates/main-dashboard.html"
+            >
               Badr Bank
             </a>
           </div>
-          
         </div>
-        <div class="footer">
-          <div class="footer-child"></div>
-          <div class="footer-content">
-            <div class="footer-navigation">
-              <div class="navigation-items1">
+        <div class="frame-parent36">
+          <div class="setting-wrapper">
+            <a class="setting7">Setting</a>
+          </div>
+          <div class="search-bar2">
+            <div class="logo-container1">
+              <div class="rectangle-parent81">
+                <div class="frame-child134"></div>
                 <img
-                  class="home-2-icon4"
+                  class="magnifying-glass-1-icon7"
+                  alt=""
+                  src="./public/magnifyingglass-1.svg"
+                />
+                <div class="search-for-something-frame">
+                  <a class="search-for-something7">Search for something</a>
+                </div>
+              </div>
+            </div>
+            <div class="search-bar-inner">
+              <img
+                class="frame-child135"
+                loading="lazy"
+                alt=""
+                src="./public/group-4.svg"
+              />
+            </div>
+            <div class="search-bar-child">
+              <img
+                class="frame-child136"
+                loading="lazy"
+                alt=""
+                src="./public/group-3.svg"
+              />
+            </div>
+            <img
+              class="mask-group-icon10"
+              loading="lazy"
+              alt=""
+              src="./public/mask-group@2x.png"
+            />
+          </div>
+        </div>
+      </header>
+      <main class="navbar">
+        <div class="navbar-background-parent">
+          <div class="navbar-background"></div>
+          <div class="frame-wrapper56">
+            <div class="menu-icons-parent">
+              <div class="menu-icons7">
+                <img
+                  class="home-2-icon7"
                   loading="lazy"
                   alt=""
-                  src="./public/home-21.svg"
+                  src="./public/home-2.svg"
                 />
-
                 <img
-                  class="transfer-1-icon4"
+                  class="transfer-1-icon7"
                   loading="lazy"
                   alt=""
                   src="./public/transfer-1.svg"
                 />
-
-                <img class="user-3-14" alt="" src="./public/user-3-11.svg" />
-
                 <img
-                  class="economic-investment-1-icon4"
+                  class="user-3-17"
+                  loading="lazy"
+                  alt=""
+                  src="./public/user-3-11.svg"
+                />
+                <img
+                  class="economic-investment-1-icon7"
                   loading="lazy"
                   alt=""
                   src="./public/economicinvestment-1.svg"
                 />
-
                 <img
-                  class="credit-card-1-icon7"
+                  class="credit-card-1-icon10"
                   loading="lazy"
                   alt=""
-                  src="./public/creditcard-12.svg"
+                  src="./public/creditcard-1.svg"
                 />
-
-                <div class="menu-items2">
+                <div class="financial-goals-title">
                   <img
-                    class="loan-1-icon4"
+                    class="loan-1-icon7"
                     loading="lazy"
                     alt=""
                     src="./public/loan-1.svg"
                   />
                 </div>
-                <div class="menu-items3">
+                <div class="redeem-button">
                   <img
-                    class="service-1-icon4"
+                    class="service-1-icon7"
                     loading="lazy"
                     alt=""
                     src="./public/service-1.svg"
                   />
                 </div>
-                <div class="menu-items4">
+                <div class="calculator-button">
                   <img
-                    class="econometrics-1-icon4"
+                    class="econometrics-1-icon7"
                     loading="lazy"
                     alt=""
                     src="./public/econometrics-1.svg"
                   />
                 </div>
-                <div class="menu-items5">
+                <div class="profile-name-button">
                   <img
-                    class="settings-solid-14"
+                    class="settings-solid-17"
                     loading="lazy"
                     alt=""
-                    src="./public/settings-solid-1.svg"
+                    src="./public/settings-solid-11.svg"
                   />
                 </div>
               </div>
-              <div class="page-navigation">
-                <div class="page-links">
-                  <a class="dashboard5">Dashboard</a>
-                  <h3 class="transactions18">Transactions</h3>
-                  <a class="accounts6">Accounts</a>
-                  <h3 class="investments6">Investments</h3>
-                  <h3 class="credit-cards6">Credit Cards</h3>
-                  <h3 class="loans4">Loans</h3>
-                  <a class="services4">Services</a>
-                  <h3 class="my-privileges4">My Privileges</h3>
-                  <a class="setting4">Setting</a>
+              <div class="rewards-header">
+                <div class="page-title1">
+                  <a class="dashboard9">Dashboard</a>
+                  <div class="transactions21">Transactions</div>
+                  <a class="accounts9">Accounts</a>
+                  <div class="investments9">Investments</div>
+                  <div class="credit-cards9">Credit Cards</div>
+                  <div class="loans8">Loans</div>
+                  <a class="services9">Services</a>
+                  <div class="my-privileges7">My Privileges</div>
+                  <a class="setting8">Setting</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <section class="profile-background-parent">
+          <footer class="profile-background"></footer>
+          <div class="rectangle-parent82">
+            <div class="frame-child137"></div>
+            <div class="frame-child138"></div>
+            <div class="frame-parent37">
+              <div class="edit-options-wrapper">
+                <div class="edit-options">
+                  <div class="edit-profile">Edit Profile</div>
+                  <a href="file:///C:/Users/dell/Desktop/bank-sys-test-main/templates/setting-page-2.html" class="preferences">Preferences</a>
+
+                  <a href="file:///C:/Users/dell/Desktop/bank-sys-test-main/templates/setting-page-3.html" class="security">Security</a>
+                </div>
+              </div>
+              <div class="frame-child139"></div>
+            </div>
+            <div class="frame-child140"></div>
+            <div class="profile-details">
+              <div class="profile-details-inner">
+                <!-- Profile picture -->
+                <img
+                  id="profileImage"
+                  class="frame-child141"
+                  loading="lazy"
+                  alt="Profile Picture"
+                  src="./public/group-206@2x.png"
+                  onclick="document.getElementById('profilePicture').click();" 
+                  style="cursor: pointer;"
+                />
+                <input
+                  type="file"
+                  id="profilePicture"
+                  name="profile_picture"
+                  style="display: none;"
+                  accept="image/*"
+                />
+              </div>
+              <form
+                class="personal-info" id="profileForm"
+              >
+                <div class="personal-info-fields">
+                  <div class="personal-info-field-labels">
+                    <div class="your-name">First Name</div>
+                    <div class="rectangle-parent83">
+                      <div class="frame-child142"></div>
+                      <input
+                        class="charlene-reed"
+                        placeholder="enter your First name"
+                        type="text"
+                        name="first_name"
+                      />
+                    </div>
+                  </div>
+                  <div class="edit-profile-button">
+                    <a class="email">Username</a>
+                    <div class="rectangle-parent84">
+                      <div class="frame-child143"></div>
+                      <input
+                        class="charlenereedgmailcom"
+                        placeholder="enter your Username"
+                        type="text"
+                        name="username"
+                      />
+                    </div>
+                     <div class="account-info-field-labels2">
+                    <div class="present-address">Email</div>
+                    <div class="rectangle-parent90">
+                      <div class="frame-child149"></div>
+                      <input
+                        class="san-jose-california1"
+                        placeholder="exemple@gmail.com"
+                        type="email"
+                        name="email_address"
+                      />
+                    </div>
+                  </div>
+                  </div>
+                  <div class="personal-info-field-labels1">
+                    <div class="date-of-birth">Date of Birth</div>
+                    <div class="rectangle-parent85">
+                      <div class="frame-child144"></div>
+                      <input
+                        class="january-1990"
+                        placeholder="enter your date of birth"
+                        type="date"
+                        name="date_of_birth"
+                      />
+                      <div class="name-icon-wrapper">
+                        <img
+                          class="name-icon"
+                          alt=""
+                          src="./public/calendar.svg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="personal-info-field-labels2">
+                    <div class="permanent-address">NiN CUST</div>
+                    <div class="rectangle-parent86">
+                      <div class="frame-child145"></div>
+                      <input
+                        class="san-jose-california"
+                        placeholder="enter your NiN CUST"
+                        type="text"
+                        name="NIN_cust"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="account-info-fields">
+                  <div class="account-info-field-labels">
+                    <a class="user-name">Last Name</a>
+                    <div class="rectangle-parent88">
+                      <div class="frame-child147"></div>
+                      <input
+                        class="charlene-reed1"
+                        placeholder="enter your Last name"
+                        type="text"
+                        name="last_name"
+                      />
+                    </div>
+                  </div>
+                  <div class="account-info-field-labels1">
+                    <div class="password">Password</div>
+                    <div class="rectangle-parent89">
+                      <div class="frame-child148"></div>
+                      <input
+                        class="input1"
+                        placeholder="**********"
+                        type="password"
+                        name="password"
+                      />
+                    </div>
+                  </div>
+                  <div class="account-info-field-labels2">
+                    <div class="present-address">Present Address</div>
+                    <div class="rectangle-parent90">
+                      <div class="frame-child149"></div>
+                      <input
+                        class="san-jose-california1"
+                        placeholder="enter your adresse"
+                        type="text"
+                        name="address"
+                      />
+                    </div>
+                  </div>
+                  <div class="account-info-field-labels3">
+                    <div class="city">Phone Number</div>
+                    <div class="rectangle-parent91">
+                      <div class="frame-child150"></div>
+                      <input
+                        class="san-jose"
+                        placeholder="enter your Phone Number"
+                        type="text"
+                        name="phone_number"
+                      />
+                    </div>
+                  </div>
+                  <div class="account-info-field-labels4">
+                    <div class="country">RIB CUST</div>
+                    <div class="rectangle-parent92">
+                      <div class="frame-child151"></div>
+                      <input
+                        class="usa"
+                        placeholder="enter your RIB CUST"
+                        type="text"
+                        name="Rib_cust"
+                      />
+                    </div>
+                  </div>
+                  <button class="rectangle-parent93" type="submit">
+                    <div class="frame-child152"></div>
+                    <div class="save">Save</div>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      <div class="separator4"></div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Handle profile picture change
+          document.getElementById("profilePicture").addEventListener("change", function () {
+            const profilePictureInput = this;
+            if (profilePictureInput.files && profilePictureInput.files[0]) {
+              const reader = new FileReader();
+              reader.onload = function (e) {
+                document.getElementById("profileImage").src = e.target.result;
+              };
+              reader.readAsDataURL(profilePictureInput.files[0]);
+            }
+          });
+        
+          // Handle form submission
+          document.getElementById("profileForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+        
+            const formData = new FormData(this);
+        
+            try {
+              const response = await fetch("http://127.0.0.1:5001/update-profile", {
+                method: "POST",
+                body: formData,
+                credentials: 'include'  // Include cookies with the request to maintain session
+              });
+        
+              const result = await response.json();
+        
+              if (response.ok) {
+                alert("Profile updated successfully!");
+              } else {
+                console.log("Error response:", result);
+                alert("Error updating profile: " + (result.message || result.error || "Unexpected error occurred"));
+              }
+            } catch (error) {
+              console.error("An error occurred:", error);
+              alert("An error occurred: " + error.message);
+            }
+          });
+        
+          // Trigger file input click on image click
+          document.getElementById("profileImage").addEventListener("click", function () {
+            document.getElementById("profilePicture").click();
+          });
+        });
+        </script>
+         
     </div>
   </body>
 </html>
