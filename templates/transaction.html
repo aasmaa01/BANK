@@ -14,35 +14,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
     />
-    <script>
-      document.getElementById('transaction-form').addEventListener('submit', function(event) {
-          event.preventDefault();
-      
-          const formData = {
-              amount: document.getElementById('amount').value,
-              currency: document.getElementById('currency').value,
-              date: document.getElementById('date').value,
-              transaction_type: document.getElementById('transaction_type').value
-          };
-      
-          fetch('/transaction', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(formData)
-          })
-          .then(response => response.json())
-          .then(data => {
-              alert(data.message);
-              document.getElementById('transaction-form').reset();
-          })
-          .catch(error => {
-              console.error('Error:', error);
-              alert('An error occurred');
-          });
-      });
-      </script>
+    
   </head>
   <body>
     <div class="transaction">
@@ -248,7 +220,7 @@
                       <div class="card-logo-child"></div>
                       <div class="card-logo-placeholder">
                         <b class="b6">3778 **
-** 1234</b>
+                          ** 1234</b>
                       </div>
                       <img
                         class="card-logo-item"
@@ -567,6 +539,7 @@
                 </div>
               </div>
             </div>
+            
           </div>
           <div class="pagination">
             <img
@@ -612,8 +585,157 @@
               </div>
             </div>
           </div>
+          <h3 class="recent-transaction">New  Transaction</h3>
+          <section class="frame-section">
+            
+            <div class="rectangle-parent36">
+              <div class="frame-child58"></div>
+              
+              <div class="credit-card-generally">
+                Credit Card generally means a plastic card issued by Scheduled
+                Commercial Banks assigned to a Cardholder, with a credit limit,
+                that can be used to purchase goods and services on credit or
+                obtain cash advances.
+              </div>
+              <div  id="cardForm" class="credit-card-form" >
+                <div class="card-type-info">
+                  <div class="card-type-container">
+                    <div class="card-type3">Transaction Type</div>
+                    <div class="rectangle-parent37">
+                      <div class="frame-child559"></div>
+                      <input  id="Transaction_Type" class="classic" placeholder="Transaction Type" type="text" />
+                    </div>
+                  </div>
+                  <div class="card-number-parent">
+                    <div class="card-number3">Card Number</div>
+                    <div class="rectangle-parent38">
+                      <div class="frame-child600"></div>
+                     
+                      <input type="text" class="classic"  id="card_number" name="card_number" placeholder="**** **** **** ****" required>
+                    </div>
+                  </div>
+                  <div class="name-on-card-parent">
+                    <div class="name-on-card">Amount</div>
+                    <div class="rectangle-parent400">
+                      <div class="frame-child62"></div>
+                      <input id="Amount" 
+                        class="my-cards1"
+                        placeholder="$"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <button id="addCardButton" class="rectangle-parent39" type="button">
+                    <div class="frame-child661"></div>
+                    <div class="add-card">Add Transaction</div>
+                  </button>
+                  
+                </div>
+                <div class="name-expiration">
+                  <div class="name-on-card-parent">
+                    <div class="name-on-card">Description</div>
+                    <div class="rectangle-parent400">
+                      <div class="frame-child62"></div>
+                      <input id="Description" 
+                        class="my-cards1"
+                        placeholder="My Cards"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <div class="expiration-date-parent">
+                    <div class="expiration-date">Date</div>
+                    <div class="rectangle-parent400">
+                      <div class="frame-child63"></div>
+                      <input  type="date" id="date" name="expiration_date" placeholder="JJ/MM/YY" required>
+                      <div class="calendar-icon">
+                        <img
+                          class="calendar-icon1"
+                          alt=""
+                          src="./public/calendar.svg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="name-on-card-parent">
+                    <div class="name-on-card">Account ID</div>
+                    <div class="rectangle-parent400">
+                      <div class="frame-child62"></div>
+                      <input id="Account_ID" 
+                        class="my-cards1"
+                        placeholder="Account ID"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
         </section>
       </main>
     </div>
+    <div class="page-background1"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const addCardButton = document.getElementById('addCardButton');
+      
+        addCardButton.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent the default form submission
+      
+          // Collect data
+          const card_number = document.getElementById('card_number').value;
+          const Account_ID = document.getElementById('Account_ID').value;
+          const Description = document.getElementById('Description').value;
+          const Amount = document.getElementById('Amount').value;
+          const date = document.getElementById('date').value;
+          const Transaction_Type = document.getElementById('Transaction_Type').value;
+          // Validate inputs
+          if (!card_number || !Account_ID|| !Description || !Amount || !date  || !Transaction_Type) {
+            alert('Please fill in all fields.');
+            return;
+          }
+      
+          // Prepare data to send
+          const transactionData = {
+            card_number: card_number,
+            Account_ID:Account_ID,
+            Description: Description,
+            date : date ,
+            Transaction_Type: Transaction_Type,
+            Amount: Amount
+          };
+      
+          // Send data to the backend
+          fetch('http://127.0.0.1:5001/add_transaction', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(transactionData)
+          })
+          .then(response => {
+            console.log('Response status:', response.status); // Log response status
+            return response.json();
+          })
+          .then(data => {
+            console.log('Response data:', data); // Log response data
+            if (data.message) {
+              alert(data.message);
+              // No form reset needed since you're using divs
+            } else {
+              alert('Error adding transaction: ' + (data.error || 'Unknown error'));
+            }
+          })
+          .catch(error => {
+            console.error('Fetch error:', error);
+            alert('An error occurred. Please try again.');
+          });
+        });
+      });
+      
+      </script>
+       
   </body>
 </html>
