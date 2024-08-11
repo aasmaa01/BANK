@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+ <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
@@ -15,30 +15,6 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
     />
   </head>
-  <script>
-    // credit-cards.js
-      document.addEventListener('DOMContentLoaded', function() {
-        fetch('/cards')
-        .then(response => response.json())
-        .then(data => {
-            const list = document.getElementById('credit-cards-list');
-            data.forEach(card => {
-                const cardElement = document.createElement('div');
-                cardElement.className = 'card';
-                cardElement.innerHTML = `
-                    <p>Card Number: ${card.card_number}</p>
-                    <p>Card Type: ${card.card_type}</p>
-                    <p>Expiration Date: ${card.expiration_date}</p>
-                    <p>Cardholder Name: ${card.cardholder_name}</p>
-                    <p>Balance: ${card.balance}</p>
-          `     ;
-                list.appendChild(cardElement);
-            });
-        })
-        .catch(error => console.error('Error:', error));
-      });
-
-  </script>
   <body>
     <div class="credit-cards2">
       <div class="page-background"></div>
@@ -465,33 +441,35 @@
               that can be used to purchase goods and services on credit or
               obtain cash advances.
             </div>
-            <div class="credit-card-form">
+            <div  id="cardForm" class="credit-card-form" >
               <div class="card-type-info">
                 <div class="card-type-container">
                   <div class="card-type3">Card Type</div>
                   <div class="rectangle-parent37">
                     <div class="frame-child59"></div>
-                    <input class="classic" placeholder="Classic" type="text" />
+                    <input  id="card_type" class="classic" placeholder="Classic" type="text" />
                   </div>
                 </div>
                 <div class="card-number-parent">
                   <div class="card-number3">Card Number</div>
                   <div class="rectangle-parent38">
                     <div class="frame-child60"></div>
-                    <div class="div8">**** **** **** ****</div>
+                   
+                    <input type="text" class="classic"  id="card_number" name="card_number" placeholder="**** **** **** ****" required>
                   </div>
                 </div>
-                <button class="rectangle-parent39">
+                <button id="addCardButton" class="rectangle-parent39" type="button">
                   <div class="frame-child61"></div>
                   <div class="add-card">Add Card</div>
                 </button>
+                
               </div>
               <div class="name-expiration">
                 <div class="name-on-card-parent">
                   <div class="name-on-card">Name On Card</div>
                   <div class="rectangle-parent40">
                     <div class="frame-child62"></div>
-                    <input
+                    <input id="name_on_card" 
                       class="my-cards1"
                       placeholder="My Cards"
                       type="text"
@@ -502,7 +480,7 @@
                   <div class="expiration-date">Expiration Date</div>
                   <div class="rectangle-parent41">
                     <div class="frame-child63"></div>
-                    <div class="january-2025">25 January 2025</div>
+                    <input  type="date" id="expiration_date" name="expiration_date" placeholder="JJ/MM/YY" required>
                     <div class="calendar-icon">
                       <img
                         class="calendar-icon1"
@@ -591,6 +569,64 @@
         </section>
       </main>
       <div class="page-background1"></div>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const addCardButton = document.getElementById('addCardButton');
+
+  addCardButton.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Collect data
+    const cardType = document.getElementById('card_type').value;
+    const cardNumber = document.getElementById('card_number').value;
+    const nameOnCard = document.getElementById('name_on_card').value;
+    const expirationDate = document.getElementById('expiration_date').value;
+
+    // Validate inputs
+    if (!cardType || !cardNumber || !nameOnCard || !expirationDate) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    // Prepare data to send
+    const cardData = {
+      card_type: cardType,
+      card_number: cardNumber,
+      name_on_card: nameOnCard,
+      expiration_date: expirationDate
+    };
+
+    // Send data to the backend
+    fetch('http://127.0.0.1:5001/cards', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(cardData)
+    })
+    .then(response => {
+      console.log('Response status:', response.status); // Log response status
+      return response.json();
+    })
+    .then(data => {
+      console.log('Response data:', data); // Log response data
+      if (data.message) {
+        alert(data.message);
+        // No form reset needed since you're using divs
+      } else {
+        alert('Error adding card: ' + (data.error || 'Unknown error'));
+      }
+    })
+    .catch(error => {
+      console.error('Fetch error:', error);
+      alert('An error occurred. Please try again.');
+    });
+  });
+});
+
+</script>
+ 
+      
     </div>
   </body>
 </html>
