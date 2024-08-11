@@ -12,6 +12,87 @@ html, body {
   display: none;
   z-index: 0;
 }
+
+.frame-section {
+  width: 1100px;
+  flex-direction: row;
+  gap: var(--gap-11xl);
+  max-width: 119%;
+  flex-shrink: 0;
+  font-size: var(--body-one-regular-16p-size);
+  color: var(--color-steelblue);
+  margin-right: 1cm;
+}
+
+.frame-section {
+  flex-wrap: wrap;
+}
+
+.frame-child64,
+.rectangle-parent36 {
+  border-radius: var(--br-6xl);
+  background-color: var(--color-white);
+  max-width: 100%;
+}
+
+.frame-child58 {
+  width: 730px;
+  height: 440px;
+  position: relative;
+  border-radius: var(--br-6xl);
+  background-color: var(--color-white);
+  display: none;
+  max-width: 100%;
+}
+
+.card-type3,
+.credit-card-generally {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+} 
+
+.card-type3 {
+  min-width: 79px;
+}
+
+.credit-card-generally {
+  width: 633px;
+  line-height: 28px;
+  max-width: 100%;
+}
+.rectangle-parent36 {
+  margin-right: 2cm;
+  margin-bottom: 1cm;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-8xl) var(--padding-11xl) var(--padding-19xl);
+  box-sizing: border-box;
+  gap: var(--gap-10xl);
+  min-width: 474px;
+  z-index: 1;
+}
+
+.rectangle-parent36 {
+  min-width: 100%;
+}
+
+.frame-section,
+.my-cards-heading {
+  text-align: left;
+  font-family: var(--heading-four-semibold-20p);
+}
+.button-labels,
+.frame-section,
+.my-cards-heading,
+.rectangle-parent42 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 .rectangle-icon,
 .transaction-item {
   position: relative;
@@ -97,6 +178,15 @@ html, body {
 .search-placeholder {
   flex-direction: column;
   padding: var(--padding-12xs) 0 0;
+}
+
+.rectangle-parent400 {
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-aliceblue-500);
+  flex-direction: row;
+  padding: var(--padding-sm) var(--padding-xl);
+  z-index: 1;
 }
 .rectangle-parent40,
 .search-and-filter-inner,
@@ -626,6 +716,19 @@ html, body {
   font-weight: 600;
   font-family: var(--heading-four-semibold-20p);
   z-index: 1;
+  
+
+}
+.recent-transaction {
+  margin: 0;
+  position: relative;
+  font-size: var(--heading-two-semibold-22p-size);
+  font-weight: 600;
+  font-family: var(--heading-four-semibold-20p);
+  z-index: 1;
+  margin-left: 1cm;
+  margin-right: 25cm;
+  margin-bottom: 1cm;
 }
 .card-list1 {
   align-self: stretch;
@@ -1134,6 +1237,17 @@ html, body {
   flex-shrink: 0;
   height: 100%; /* Add height to allow full height */
 }
+
+.frame-child600 {
+  height: 50px;
+  width: 320px;
+  position: relative;
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-aliceblue-500);
+  box-sizing: border-box;
+  display: none;
+}
 .frame-child60 {
   width: 1000px;
   height: 397px;
@@ -1356,6 +1470,25 @@ html, body {
   text-align: left;
   display: inline-block;
   min-width: 71px;
+}
+
+.add-card-button-container,
+.card-statistics-title-containe {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.add-card-button-container {
+  flex-direction: row;
+  padding: 0 var(--padding-12xs);
+}
+.frame-child661 {
+  height: 50px;
+  width: 160px;
+  position: relative;
+  border-radius: var(--br-4xs);
+  background-color: var(--color-blue-200);
+  display: none;
 }
 .frame-child61 {
   height: 35px;
@@ -2385,3 +2518,248 @@ html, body {
     box-sizing: border-box;
   }
 }
+.credit-card-form {
+  align-self: stretch;
+  flex-direction: row;
+  gap: var(--gap-11xl);
+  color: var(--color-gray-100);
+}
+.credit-card-form {
+  flex-wrap: wrap;
+}
+.credit-card-form,
+.expiration-date-parent,
+.name-expiration {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.name-expiration {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-3xl);
+  min-width: 208px;
+}
+.card-type-info {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-3xl);
+  min-width: 208px;
+}
+.card-type-info,
+.rectangle-parent39 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.card-type-info {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-3xl);
+  min-width: 208px;
+}
+
+.card-type-container,
+.rectangle-parent37 {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.card-type-container {
+  flex-direction: column;
+  gap: var(--gap-2xs);
+}
+
+.rectangle-parent37 {
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-aliceblue-500);
+  flex-direction: row;
+  padding: var(--padding-sm) var(--padding-xl);
+  z-index: 1;
+}
+
+.frame-child559 {
+  height: 50px;
+  width: 320px;
+  position: relative;
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-aliceblue-500);
+  box-sizing: border-box;
+  display: none;
+}
+.card-type-container,
+.rectangle-parent37 {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.classic {
+  width: 51px;
+  border: 0;
+  outline: 0;
+  font-family: var(--heading-four-semibold-20p);
+  font-size: var(--button-2-medium-15p-size);
+  background-color: transparent;
+  height: 18px;
+  position: relative;
+  color: var(--color-steelblue);
+  text-align: left;
+  display: inline-block;
+  padding: 0;
+  z-index: 1;
+}
+
+.card-number3 {
+  position: relative;
+  display: inline-block;
+  min-width: 102px;
+  z-index: 1;
+}
+.card-number-parent,
+.rectangle-parent38 {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.card-number-parent {
+  flex-direction: column;
+  padding: 0 0 var(--padding-5xs);
+  gap: var(--gap-2xs);
+}
+
+.expiration-date-parent {
+  align-self: stretch;
+  flex-direction: column;
+  gap: var(--gap-2xs);
+}
+
+.expiration-date {
+  position: relative;
+  display: inline-block;
+  min-width: 116px;
+  z-index: 1;
+}
+
+.rectangle-parent400 {
+  align-self: stretch;
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-aliceblue-500);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--padding-sm) var(--padding-6xl) var(--padding-sm)
+    var(--padding-xl);
+  gap: var(--gap-xl);
+  z-index: 1;
+  font-size: var(--button-2-medium-15p-size);
+  color: var(--color-steelblue);
+}
+
+.frame-child63 {
+  height: 50px;
+  width: 320px;
+  position: relative;
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-aliceblue-500);
+  box-sizing: border-box;
+  display: none;
+}
+
+.rectangle-parent38 {
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-aliceblue-500);
+  flex-direction: row;
+  padding: var(--padding-sm) var(--padding-xl);
+  white-space: nowrap;
+  z-index: 1;
+  font-size: var(--button-2-medium-15p-size);
+  color: var(--color-steelblue);
+}
+
+.rectangle-parent39 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-sm) var(--padding-20xl);
+  background-color: var(--color-blue-200);
+  border-radius: var(--br-4xs);
+  flex-direction: row;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.rectangle-parent39:hover {
+  background-color: var(--color-blueviolet);
+}
+
+.name-on-card-parent,
+.rectangle-parent400 {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.name-on-card-parent {
+  flex-direction: column;
+  gap: var(--gap-2xs);
+}
+
+.name-on-card {
+  position: relative;
+  display: inline-block;
+  min-width: 112px;
+  z-index: 1;
+}
+
+.my-cards1 {
+  width: 68px;
+  border: 0;
+  outline: 0;
+  font-family: var(--heading-four-semibold-20p);
+  font-size: var(--button-2-medium-15p-size);
+  background-color: transparent;
+  height: 18px;
+  position: relative;
+  color: var(--color-steelblue);
+  text-align: left;
+  display: inline-block;
+  padding: 0;
+  z-index: 1;
+}
+.frame-child62 {
+  height: 50px;
+  width: 320px;
+  position: relative;
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-aliceblue-500);
+  box-sizing: border-box;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
