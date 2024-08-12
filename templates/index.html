@@ -14,15 +14,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
     />
-    <script>
-      // index.js
-      document.addEventListener('DOMContentLoaded', function() {
-        // Initialization or API calls specific to the home page can go here
-        console.log('Index page loaded');
-      });
-
-    </script>
-    
   </head>
   <body>
     <div class="accounts1">
@@ -194,7 +185,7 @@
                   <div class="balance-labels">
                     <div class="balance-names">
                       <div class="my-balance">My Balance</div>
-                      <div class="values">$12,750</div>
+                      <div id="balance" class="values"></div>
                     </div>
                   </div>
                 </div>
@@ -209,7 +200,7 @@
                   <div class="frame-wrapper34">
                     <div class="income-parent">
                       <a class="income">Income</a>
-                      <div class="div">$5,600</div>
+                      <div id="income" class="div"></div>
                     </div>
                   </div>
                 </div>
@@ -224,7 +215,7 @@
                   <div class="frame-wrapper35">
                     <div class="expense-parent">
                       <a class="expense">Expense</a>
-                      <div class="div1">$3,460</div>
+                      <div id="expense" class="div1"></div>
                     </div>
                   </div>
                 </div>
@@ -239,7 +230,7 @@
                   <div class="frame-wrapper36">
                     <div class="total-saving-parent">
                       <div class="total-saving">Total Saving</div>
-                      <div class="div2">$7,920</div>
+                      <div id="total_saving" class="div2"></div>
                     </div>
                   </div>
                 </div>
@@ -542,5 +533,50 @@
         </section>
       </main>
     </div>
+    <script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    async function fetchAccountData() {
+        try {
+            const response = await fetch('http://127.0.0.1:5001/get_account_data');
+            const data = await response.json();
+            
+            console.log('Fetched Data:', data);
+
+            updateAccountData(data);
+
+        } catch (error) {
+            console.error('Error fetching account data:', error);
+        }
+    }
+    function updateAccountData(data) {
+    console.log('Updating Data:', data);
+
+    const { balance, income, expense, total_saving } = data;
+
+    const balanceElement = document.getElementById('balance');
+    const incomeElement = document.getElementById('income');
+    const expenseElement = document.getElementById('expense');
+    const totalSavingElement = document.getElementById('total_saving'); // Adjusted ID
+
+    if (balanceElement && incomeElement && expenseElement && totalSavingElement) {
+        balanceElement.textContent = formatCurrency(balance);
+        incomeElement.textContent = formatCurrency(income);
+        expenseElement.textContent = formatCurrency(expense);
+        totalSavingElement.textContent = formatCurrency(total_saving);
+    } else {
+        console.error('One or more elements not found');
+    }
+}
+
+    function formatCurrency(value) {
+        return `$${Number(value).toLocaleString()}`;
+    }
+
+    fetchAccountData();
+  });
+
+
+    </script>
   </body>
 </html>
