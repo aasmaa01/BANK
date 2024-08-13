@@ -719,7 +719,16 @@
   font-family: inherit;
   display: inline-block;
   min-width: 114px;
+  opacity: 0;
 }
+.file-upload input.photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; /* Hide the default file input box */
+  cursor: pointer;
+}
+
 .body,
 .form-container {
   flex: 1;
