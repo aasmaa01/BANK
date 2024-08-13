@@ -173,9 +173,9 @@
               <div class="edit-options-wrapper">
                 <div class="edit-options">
                   <div class="edit-profile">Edit Profile</div>
-                  <a href="file:///C:/Users/dell/Desktop/bank-sys-test-main/templates/setting-page-2.html" class="preferences">Preferences</a>
+                  <a href="C:\Users\ACER\Desktop\BANK-main\templates\setting-page-2.html" class="preferences">Preferences</a>
 
-                  <a href="file:///C:/Users/dell/Desktop/bank-sys-test-main/templates/setting-page-3.html" class="security">Security</a>
+                  <a href="C:\Users\ACER\Desktop\BANK-main\templates\setting-page-3.html" class="security">Security</a>
                 </div>
               </div>
               <div class="frame-child139"></div>
@@ -218,14 +218,14 @@
                     </div>
                   </div>
                   <div class="edit-profile-button">
-                    <a class="email">Username</a>
+                    <a class="email">ID</a>
                     <div class="rectangle-parent84">
                       <div class="frame-child143"></div>
                       <input
                         class="charlenereedgmailcom"
-                        placeholder="enter your Username"
+                        placeholder="enter your id"
                         type="text"
-                        name="username"
+                        name="id_cust"
                       />
                     </div>
                      <div class="account-info-field-labels2">
@@ -366,7 +366,7 @@
             const formData = new FormData(this);
         
             try {
-              const response = await fetch("http://127.0.0.1:5001/update-profile", {
+              const response = await fetch("http://127.0.0.1:5000/update-profile", {  // i got error in this line
                 method: "POST",
                 body: formData,
                 credentials: 'include'  // Include cookies with the request to maintain session
@@ -381,7 +381,7 @@
                 alert("Error updating profile: " + (result.message || result.error || "Unexpected error occurred"));
               }
             } catch (error) {
-              console.error("An error occurred:", error);
+              console.error("An error occurred:", error); // and error in this line
               alert("An error occurred: " + error.message);
             }
           });
