@@ -14,37 +14,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Open Sans:wght@400;600;700&display=swap"
     />
-    <script>
-      // contact.js
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const formData = {
-            full_name: document.getElementById('full_name').value,
-            email_address: document.getElementById('email_address').value,
-            phone_number: document.getElementById('phone_number').value,
-            message: document.getElementById('message').value
-        };  
-
-        fetch('/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert(data.message);
-            document.getElementById('contact-form').reset();
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('An error occurred');
-        });
-      });
-
-    </script>
   </head>
   <body>
     <div class="contact1">
@@ -167,24 +136,33 @@
               </div>
             </div>
             <div class="divsend-box-parent">
-              <div class="divsend-box">
-                <div class="form-builder">
+              <form id="contact-form" class="divsend-box" enctype="multipart/form-data" >
+                <div class="form-builder" >
                   <div class="form-label2">Full Name</div>
                   <div class="form-input-wrapper">
                     <div class="form-input2">
                       <input
+                        name="full_name"
                         class="alex-jordan"
-                        placeholder="Your Name "
+                        placeholder="Your Name"
                         type="text"
+                        required
                       />
                     </div>
                   </div>
                 </div>
                 <div class="form-label-phone-parent">
-                  <div class="form-label3">Phone</div>
+                  <div class="form-label3">ID</div>
                   <div class="form-input-container">
                     <div class="form-input3">
-                      <input class="phone1" placeholder="Phone" type="text" />
+                      <input 
+                      name="id"
+                      class="phone1" 
+                      placeholder="id" 
+                      type="text"
+                      required
+                       
+                      />
                     </div>
                   </div>
                 </div>
@@ -193,27 +171,37 @@
                   <div class="form-input-frame">
                     <div class="form-input4">
                       <input
+                        name="email_address"
                         class="nameexamplecom"
                         placeholder="name@example.com"
-                        type="text"
+                        type="email"
+                        required
                       />
                     </div>
                   </div>
                 </div>
                 <textarea
-                  class="divsend-box-child"
-                  placeholder="Message"
-                  rows="{10}"
-                  cols="{31}"
+                name="message"
+                class="divsend-box-child"
+                placeholder="Message"
+                rows="10"
+                cols="31"
+                required
                 >
                 </textarea>
-                <button class="form-button">
-                  <div class="send-message">Send Message</div>
+                <button type="submit" class="form-button">
+                  <div class="send-message"   type="button">Send Message</div>
                 </button>
-              </div>
+              </form>
               <div class="form-container">
                 <div class="body">
-                  <h1 class="photo">Photo</h1>
+                  
+                    <input 
+                    class="photo"
+                    type="file"
+                    name="photo"
+                    accept="image/*"
+                     >
                 </div>
               </div>
             </div>
@@ -419,38 +407,36 @@
       </footer>
       <script>
         async function handleContact(event) {
-            event.preventDefault();
-            
-            const form = document.getElementById('contact-form');
-            const formData = new FormData(form);
-            const payload = {
-                full_name: formData.get('full_name'),
-                email: formData.get('email'),
-                phone_number: formData.get('phone_number'),
-                message: formData.get('message')
-            };
-
-            try {
-                const response = await fetch('/contact', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(payload)
-                });
-
-                const result = await response.json();
-                if (response.ok) {
-                    alert('Message sent successfully');
-                    form.reset(); // Reset form fields
-                } else {
-                    alert('Failed to send message: ' + result.message);
-                }
-            } catch (error) {
-                alert('An error occurred: ' + error.message);
-            }
-        }
-    </script>
+          event.preventDefault();
+      
+          const form = document.getElementById('contact-form');
+          const formData = new FormData(form);
+          
+          // Log form data
+          for (let [key, value] of formData.entries()) {
+              console.log(`${key}: ${value}`);
+          }
+      
+          try {
+              const response = await fetch('http://127.0.0.1:5000/contact', {
+                  method: 'POST',
+                  body: formData // Sending FormData directly
+              });
+      
+              const result = await response.json();
+              if (response.ok) {
+                  alert('Message sent successfully');
+                  form.reset(); // Reset form fields
+              } else {
+                  alert('Failed to send message: ' + result.error);
+              }
+          } catch (error) {
+              alert('An error occurred: ' + error.message);
+          }
+      }
+      
+      </script>
+    
     </div>
   </body>
 </html>
